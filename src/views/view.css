@@ -65,7 +65,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1350px;
     margin: 0 auto;
     padding: 15px 20px;
 }
@@ -75,6 +75,12 @@ nav {
     font-size: 1.5rem;
     color: #1e88e5;
     text-decoration: none;
+    font-family: "Dangrek", serif;
+    background: linear-gradient(45deg, #ff0000, #1a53ff, #ea01ff, #fcfc00);
+    background-clip: text;
+    color: transparent;
+    background-size: 400% 400%;
+    animation: grandient 3s infinite;
 }
 
 .nav-menu {
@@ -96,6 +102,7 @@ nav {
 .nav-menu a:hover {
     color: #1e88e5;
 }
+
 
 /* Main Content */
 .container {

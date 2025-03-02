@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vietnam Travel - Khám phá vẻ đẹp Việt Nam</title>
-    <link rel="stylesheet" href="view.css">
+    <link rel="stylesheet" href="./views/view.css">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
             <h2 class="section-title">Điểm Đến Nổi Bật</h2>
             <div class="destinations">
                 <div class="destination-card">
-                    <img src="/api/placeholder/400/300" alt="Hạ Long Bay" class="destination-img">
+                    <img src="../hinh/vinhhalong.jpg" alt="Hạ Long Bay" class="destination-img">
                     <div class="destination-content">
                         <h3 class="destination-title">Vịnh Hạ Long</h3>
                         <p class="destination-desc">Khám phá kỳ quan thiên nhiên thế giới với hàng nghìn hòn đảo đá vôi
@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="destination-card">
-                    <img src="/api/placeholder/400/300" alt="Hoi An" class="destination-img">
+                    <img src="../hinh/phocohoian.png" alt="Hoi An" class="destination-img">
                     <div class="destination-content">
                         <h3 class="destination-title">Phố Cổ Hội An</h3>
                         <p class="destination-desc">Thành phố cổ quyến rũ với đèn lồng đầy màu sắc, kiến trúc cổ và văn
@@ -168,139 +168,39 @@
             </div>
         </section>
 
-        <section id="testimonials">
-            <h2 class="section-title">Khách Hàng Nói Gì Về Chúng Tôi</h2>
-            <div class="testimonials">
-                <div class="testimonial-cards">
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"Chuyến du lịch Hạ Long thật tuyệt vời! Nhờ Vietnam Travel mà gia
-                            đình tôi đã có những trải nghiệm khó quên. Hướng dẫn viên nhiệt tình, chuyên nghiệp và lịch
-                            trình hợp lý."</p>
-                        <div class="testimonial-author">
-                            <img src="/api/placeholder/50/50" alt="Avatar" class="testimonial-avatar">
-                            <div>
-                                <div class="testimonial-name">Nguyễn Văn A</div>
-                                <div class="testimonial-location">Hà Nội</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"Tour Hội An - Đà Nẵng 4 ngày thật sự đáng đồng tiền. Khách sạn 4
-                            sao, xe đưa đón sang trọng và lịch trình tham quan hợp lý. Chắc chắn sẽ quay lại và sử dụng
-                            dịch vụ của Vietnam Travel!"</p>
-                        <div class="testimonial-author">
-                            <img src="/api/placeholder/50/50" alt="Avatar" class="testimonial-avatar">
-                            <div>
-                                <div class="testimonial-name">Trần Thị B</div>
-                                <div class="testimonial-location">TP. Hồ Chí Minh</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <p class="testimonial-text">"Đây là lần đầu tiên tôi sử dụng dịch vụ của Vietnam Travel và thật
-                            sự ấn tượng. Đội ngũ tư vấn viên rất nhiệt tình, giúp tôi lên kế hoạch cho chuyến đi Sapa
-                            hoàn hảo dù thời gian gấp rút."</p>
-                        <div class="testimonial-author">
-                            <img src="/api/placeholder/50/50" alt="Avatar" class="testimonial-avatar">
-                            <div>
-                                <div class="testimonial-name">Lê Văn C</div>
-                                <div class="testimonial-location">Đà Nẵng</div>
-                            </div>
-                        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Vietnam Travel</h3>
+                    <p>Đồng hành cùng bạn khám phá vẻ đẹp Việt Nam với những trải nghiệm du lịch tuyệt vời và đáng nhớ.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">t</a>
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">ig</a>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="contact">
-            <h2 class="section-title">Liên Hệ Đặt Tour</h2>
-            <div class="contact">
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Họ và tên</label>
-                        <input type="text" id="name" placeholder="Nhập họ và tên">
-                    </div>
+                <div class="footer-col">
+                    <h3>Liên Kết Nhanh</h3>
+                    <ul class="footer-links">
+                        <li><a href="#destinations">Điểm Đến</a></li>
+                        <li><a href="#services">Dịch Vụ</a></li>
+                        <li><a href="#about">Về Chúng Tôi</a></li>
+                        <li><a href="#testimonials">Đánh Giá</a></li>
+                        <li><a href="#contact">Liên Hệ</a></li>
+                    </ul>
+                </div>
 
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" placeholder="Nhập địa chỉ email">
-                    </div>
+                <div class="footer-col">
+                    <h3>Điểm Đến</h3>
+                    <ul class="footer-links">
 
-                    <div class="form-group">
-                        <label for="phone">Số điện thoại</label>
-                        <input type="tel" id="phone" placeholder="Nhập số điện thoại">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="destination">Điểm đến</label>
-                        <select id="destination">
-                            <option value="">Chọn điểm đến</option>
-                            <option value="halong">Vịnh Hạ Long</option>
-                            <option value="hoian">Phố Cổ Hội An</option>
-                            <option value="sapa">Sapa</option>
-                            <option value="mekong">Đồng Bằng Sông Cửu Long</option>
-                            <option value="phuquoc">Đảo Phú Quốc</option>
-                            <option value="hue">Cố Đô Huế</option>
-                            <option value="other">Điểm đến khác</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="date">Ngày đi</label>
-                        <input type="date" id="date">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="duration">Số ngày</label>
-                        <select id="duration">
-                            <option value="">Chọn số ngày</option>
-                            <option value="1-3">1-3 ngày</option>
-                            <option value="4-7">4-7 ngày</option>
-                            <option value="8-14">8-14 ngày</option>
-                            <option value="15+">15+ ngày</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group full">
-                        <label for="message">Yêu cầu thêm</label>
-                        <textarea id="message" placeholder="Nhập yêu cầu chi tiết của bạn"></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <button type="submit" class="submit-btn">Gửi Yêu Cầu</button>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </div>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-col">
-                <h3>Vietnam Travel</h3>
-                <p>Đồng hành cùng bạn khám phá vẻ đẹp Việt Nam với những trải nghiệm du lịch tuyệt vời và đáng nhớ.</p>
-                <div class="footer-social">
-                    <a href="#" class="social-icon">f</a>
-                    <a href="#" class="social-icon">t</a>
-                    <a href="#" class="social-icon">in</a>
-                    <a href="#" class="social-icon">ig</a>
+                    </ul>
                 </div>
             </div>
+        </footer>
+</body>
 
-            <div class="footer-col">
-                <h3>Liên Kết Nhanh</h3>
-                <ul class="footer-links">
-                    <li><a href="#destinations">Điểm Đến</a></li>
-                    <li><a href="#services">Dịch Vụ</a></li>
-                    <li><a href="#about">Về Chúng Tôi</a></li>
-                    <li><a href="#testimonials">Đánh Giá</a></li>
-                    <li><a href="#contact">Liên Hệ</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h3>Điểm Đến</h3>
-                <ul class="footer-links">
-                    <li><a href
+</html>
