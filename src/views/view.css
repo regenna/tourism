@@ -13,7 +13,10 @@ body {
 
 /* Header */
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/api/placeholder/1200/600');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../../hinh/br.jpg');
+    /* background: url('hinh/br.jpg') center/cover no-repeat; */
+
+
     background-size: cover;
     background-position: center;
     height: 500px;
@@ -353,6 +356,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
+
 }
 
 .footer-col h3 {
@@ -439,4 +443,27 @@ footer {
     .form-group.full {
         grid-column: span 1;
     }
+}
+
+/*thông tin danh sách tour*/
+.card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+}
+
+.carousel img {
+    transition: opacity 0.5s ease-in-out;
+}
+
+.hidden {
+    display: none;
 }
