@@ -5,8 +5,9 @@ namespace web_do_an.Models
     public class PhuongTienDC
     {
         [Key]
-        public char MaPT { get; set; }
         [Required, StringLength(10)]
+        public char MaPT { get; set; }
+       
 
         public string TenPT { get; set; }
         public int SoLuongCho { get; set; }

@@ -5,8 +5,9 @@ namespace web_do_an.Models
     public class PhieuDatTour
     {
         [Key]
-        public char MaPDT { get; set; }
         [Required, StringLength(10)]
+        public char MaPDT { get; set; }
+        
 
         public int SoNguoi { get; set; }
         public DateTime NgayDat { get; set; }

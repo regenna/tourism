@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace web_do_an.Migrations
 {
     /// <inheritdoc />
-    public partial class ExtendIdentityUser : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -15,8 +15,8 @@ namespace web_do_an.Migrations
                 name: "DiemDens",
                 columns: table => new
                 {
-                    MaDD = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    TenDD = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    MaDD = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    TenDD = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MoTa = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HinhAnh = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
@@ -29,9 +29,9 @@ namespace web_do_an.Migrations
                 name: "DiemKhoiHanhs",
                 columns: table => new
                 {
-                    MaDKH = table.Column<string>(type: "nvarchar(1)", nullable: false),
+                    MaDKH = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     SDT = table.Column<int>(type: "int", maxLength: 10, nullable: false),
-                    TenDKH = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    TenDKH = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DC = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -43,8 +43,8 @@ namespace web_do_an.Migrations
                 name: "LoaiTours",
                 columns: table => new
                 {
-                    MaLoai = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    TenLoai = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false)
+                    MaLoai = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    TenLoai = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -55,8 +55,8 @@ namespace web_do_an.Migrations
                 name: "PhuongTienDCs",
                 columns: table => new
                 {
-                    MaPT = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    TenPT = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    MaPT = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    TenPT = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SoLuongCho = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -68,7 +68,7 @@ namespace web_do_an.Migrations
                 name: "TaiKhoans",
                 columns: table => new
                 {
-                    MaTK = table.Column<string>(type: "nvarchar(1)", nullable: false),
+                    MaTK = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
                     TenKH = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MatKhau = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DC = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -86,8 +86,8 @@ namespace web_do_an.Migrations
                 name: "Tours",
                 columns: table => new
                 {
-                    MaTour = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    TenTour = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    MaTour = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    TenTour = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SoNgay = table.Column<int>(type: "int", nullable: false),
                     SoDem = table.Column<int>(type: "int", nullable: false),
                     DichVuTour = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -96,7 +96,7 @@ namespace web_do_an.Migrations
                     MoTaTour = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TrangThaiTour = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MaLoai = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    LoaiTourMaLoai = table.Column<string>(type: "nvarchar(1)", nullable: true)
+                    LoaiTourMaLoai = table.Column<string>(type: "nvarchar(10)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -112,14 +112,14 @@ namespace web_do_an.Migrations
                 name: "ChiTietTours",
                 columns: table => new
                 {
-                    MaCTTour = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    NgayKhoiHanh = table.Column<DateTime>(type: "datetime2", maxLength: 10, nullable: false),
+                    MaCTTour = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    NgayKhoiHanh = table.Column<DateTime>(type: "datetime2", nullable: false),
                     NgayKetThuc = table.Column<DateTime>(type: "datetime2", nullable: false),
                     SoChoDaDat = table.Column<int>(type: "int", nullable: false),
                     MaTour = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    TourMaTour = table.Column<string>(type: "nvarchar(1)", nullable: true),
+                    TourMaTour = table.Column<string>(type: "nvarchar(10)", nullable: true),
                     MaDKH = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    DiemKhoiHanhMaDKH = table.Column<string>(type: "nvarchar(1)", nullable: true)
+                    DiemKhoiHanhMaDKH = table.Column<string>(type: "nvarchar(10)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -140,8 +140,8 @@ namespace web_do_an.Migrations
                 name: "DanhGias",
                 columns: table => new
                 {
-                    MaTour = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    MaTK = table.Column<string>(type: "nvarchar(1)", nullable: false),
+                    MaTour = table.Column<string>(type: "nvarchar(10)", nullable: false),
+                    MaTK = table.Column<string>(type: "nvarchar(10)", nullable: false),
                     NoiDungDanhGia = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SoSao = table.Column<float>(type: "real", nullable: false),
                     ThoiGianDanhGia = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -167,8 +167,8 @@ namespace web_do_an.Migrations
                 name: "ChiTietPhuongTiens",
                 columns: table => new
                 {
-                    MaCTTour = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    MaPT = table.Column<string>(type: "nvarchar(1)", nullable: false),
+                    MaCTTour = table.Column<string>(type: "nvarchar(10)", nullable: false),
+                    MaPT = table.Column<string>(type: "nvarchar(10)", nullable: false),
                     TongSL = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -192,14 +192,14 @@ namespace web_do_an.Migrations
                 name: "LichTrinhs",
                 columns: table => new
                 {
-                    MaLT = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    TenLT = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    MaLT = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    TenLT = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HoatDongSang = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HoatDongTrua = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     HoatDongChieu = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TeHoatDongToi = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MaCTTour = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    ChiTietTourMaCTTour = table.Column<string>(type: "nvarchar(1)", nullable: true)
+                    ChiTietTourMaCTTour = table.Column<string>(type: "nvarchar(10)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -215,16 +215,16 @@ namespace web_do_an.Migrations
                 name: "PhieuDatTours",
                 columns: table => new
                 {
-                    MaPDT = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    SoNguoi = table.Column<int>(type: "int", maxLength: 10, nullable: false),
+                    MaPDT = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    SoNguoi = table.Column<int>(type: "int", nullable: false),
                     NgayDat = table.Column<DateTime>(type: "datetime2", nullable: false),
                     TongTien = table.Column<float>(type: "real", nullable: false),
                     DichVuTour = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TrangThaiPDT = table.Column<int>(type: "int", nullable: false),
                     MaTK = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    TaiKhoanMaTK = table.Column<string>(type: "nvarchar(1)", nullable: true),
+                    TaiKhoanMaTK = table.Column<string>(type: "nvarchar(10)", nullable: true),
                     MaCTTour = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    ChiTietTourMaCTTour = table.Column<string>(type: "nvarchar(1)", nullable: true)
+                    ChiTietTourMaCTTour = table.Column<string>(type: "nvarchar(10)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -245,8 +245,8 @@ namespace web_do_an.Migrations
                 name: "ChiTietLichTrinhs",
                 columns: table => new
                 {
-                    MaLT = table.Column<string>(type: "nvarchar(1)", nullable: false),
-                    MaDD = table.Column<string>(type: "nvarchar(1)", nullable: false),
+                    MaLT = table.Column<string>(type: "nvarchar(10)", nullable: false),
+                    MaDD = table.Column<string>(type: "nvarchar(10)", nullable: false),
                     Ngay = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>

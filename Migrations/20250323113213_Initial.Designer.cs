@@ -12,8 +12,8 @@ using web_do_an.Models;
 namespace web_do_an.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250319152800_ExtendIdentityUser")]
-    partial class ExtendIdentityUser
+    [Migration("20250323113213_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,10 +28,10 @@ namespace web_do_an.Migrations
             modelBuilder.Entity("web_do_an.Models.ChiTietLichTrinh", b =>
                 {
                     b.Property<string>("MaDD")
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("MaLT")
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<DateTime>("Ngay")
                         .HasColumnType("datetime2");
@@ -46,10 +46,10 @@ namespace web_do_an.Migrations
             modelBuilder.Entity("web_do_an.Models.ChiTietPhuongTien", b =>
                 {
                     b.Property<string>("MaCTTour")
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("MaPT")
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<int>("TongSL")
                         .HasColumnType("int");
@@ -65,10 +65,11 @@ namespace web_do_an.Migrations
                 {
                     b.Property<string>("MaCTTour")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(1)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("DiemKhoiHanhMaDKH")
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("MaDKH")
                         .IsRequired()
@@ -82,14 +83,13 @@ namespace web_do_an.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("NgayKhoiHanh")
-                        .HasMaxLength(10)
                         .HasColumnType("datetime2");
 
                     b.Property<int>("SoChoDaDat")
                         .HasColumnType("int");
 
                     b.Property<string>("TourMaTour")
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.HasKey("MaCTTour");
 
@@ -103,10 +103,10 @@ namespace web_do_an.Migrations
             modelBuilder.Entity("web_do_an.Models.DanhGia", b =>
                 {
                     b.Property<string>("MaTour")
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("MaTK")
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("NoiDungDanhGia")
                         .IsRequired()
@@ -129,7 +129,8 @@ namespace web_do_an.Migrations
                 {
                     b.Property<string>("MaDD")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(1)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("HinhAnh")
                         .IsRequired()
@@ -141,8 +142,7 @@ namespace web_do_an.Migrations
 
                     b.Property<string>("TenDD")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MaDD");
 
@@ -153,7 +153,8 @@ namespace web_do_an.Migrations
                 {
                     b.Property<string>("MaDKH")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(1)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("DC")
                         .IsRequired()
@@ -165,8 +166,7 @@ namespace web_do_an.Migrations
 
                     b.Property<string>("TenDKH")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MaDKH");
 
@@ -177,10 +177,11 @@ namespace web_do_an.Migrations
                 {
                     b.Property<string>("MaLT")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(1)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("ChiTietTourMaCTTour")
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("HoatDongChieu")
                         .IsRequired()
@@ -204,8 +205,7 @@ namespace web_do_an.Migrations
 
                     b.Property<string>("TenLT")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MaLT");
 
@@ -218,12 +218,12 @@ namespace web_do_an.Migrations
                 {
                     b.Property<string>("MaLoai")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(1)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("TenLoai")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MaLoai");
 
@@ -234,10 +234,11 @@ namespace web_do_an.Migrations
                 {
                     b.Property<string>("MaPDT")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(1)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("ChiTietTourMaCTTour")
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("DichVuTour")
                         .IsRequired()
@@ -255,11 +256,10 @@ namespace web_do_an.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<int>("SoNguoi")
-                        .HasMaxLength(10)
                         .HasColumnType("int");
 
                     b.Property<string>("TaiKhoanMaTK")
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<float>("TongTien")
                         .HasColumnType("real");
@@ -280,15 +280,15 @@ namespace web_do_an.Migrations
                 {
                     b.Property<string>("MaPT")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(1)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<int>("SoLuongCho")
                         .HasColumnType("int");
 
                     b.Property<string>("TenPT")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("MaPT");
 
@@ -299,7 +299,8 @@ namespace web_do_an.Migrations
                 {
                     b.Property<string>("MaTK")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(1)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("DC")
                         .IsRequired()
@@ -337,7 +338,8 @@ namespace web_do_an.Migrations
                 {
                     b.Property<string>("MaTour")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("nvarchar(1)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("AnhDaiDien")
                         .IsRequired()
@@ -351,7 +353,7 @@ namespace web_do_an.Migrations
                         .HasColumnType("real");
 
                     b.Property<string>("LoaiTourMaLoai")
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("MaLoai")
                         .IsRequired()
@@ -369,8 +371,7 @@ namespace web_do_an.Migrations
 
                     b.Property<string>("TenTour")
                         .IsRequired()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TrangThaiTour")
                         .IsRequired()

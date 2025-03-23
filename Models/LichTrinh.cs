@@ -5,8 +5,9 @@ namespace web_do_an.Models
     public class LichTrinh
     {
         [Key]
-        public char MaLT { get; set; }
         [Required, StringLength(10)]
+        public char MaLT { get; set; }
+     
 
         public string TenLT { get; set; }
 

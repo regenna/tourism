@@ -4,12 +4,14 @@ namespace web_do_an.Models
 {
     public class DiemKhoiHanh
     {
-         [Key]
-        public char MaDKH { get; set; }
-        [Required, StringLength(10)]
+        [Key]
 
-        public int SDT { get; set; }
+        [Required, StringLength(10)]
+        public char MaDKH { get; set; }
+
         [MaxLength(10)]
+        public int SDT { get; set; }
+      
 
         public string TenDKH { get; set; }
      

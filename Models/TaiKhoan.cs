@@ -5,6 +5,7 @@ namespace web_do_an.Models
     public class TaiKhoan
     {
         [Key]
+        [Required, StringLength(10)]
         public char MaTK { get; set; }
         public string TenKH { get; set; }
         public string MatKhau { get; set; }

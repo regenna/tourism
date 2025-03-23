@@ -1,4 +1,5 @@
-﻿using web_do_an.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using web_do_an.Models;
 using web_do_an.Repositories.IRepository;
 
 namespace web_do_an.Repositories.EFRepository
@@ -20,7 +21,7 @@ namespace web_do_an.Repositories.EFRepository
         public async Task<TaiKhoan> GetByIdAsync(int id)
         {
             return await _context.TaiKhoans
-                .FirstOrDefaultAsync(c => c.MaPT == id); // Tìm theo id
+                .FirstOrDefaultAsync(c => c.MaTK == id); // Tìm theo id
         }
         public async Task AddAsync(TaiKhoan taikhoan)
         {

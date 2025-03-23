@@ -1,0 +1,205 @@
+﻿@{
+    ViewData["Title"] = "Chi Tiết Tour";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><b>Tour Nhà Thỏ</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="TrangChu.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="DanhSach.html">Tour</a></li>
+                    <li class="nav-item"><a class="nav-link" href="TaiKhoanUser.html">Tài Khoản</a></li>
+                    <li class="nav-item"><a class="nav-link" href="deals.html">Ưu Đãi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <header>
+            <h1 class="tour-title">@ViewBag.Tour.TenTour</h1>
+        </header>
+        <div class="container container-1">
+            <div class="row">
+                <div class="col col-md-8">
+                    <div class="tour-gallery">
+                        <div class="main-image-container">
+                            <!-- <div class="budget-tag">
+                                <i class="fas fa-piggy-bank"></i> Tour Tiết Kiệm
+                            </div> -->
+                            <img src="@ViewBag.Tour.HinhAnh" alt="@ViewBag.Tour.TenTour" class="main-image">
+                            <button class="nav-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                            <button class="nav-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                        <div class="thumbnail-gallery">
+                            <img src="https://images2.thanhnien.vn/528068263637045248/2024/1/25/e093e9cfc9027d6a142358d24d2ee350-65a11ac2af785880-17061562929701875684912.jpg" alt="Thumbnail 1" class="thumbnail">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFk6JFYyeZYDgnfPZagwFAWawtaSfZdoLOyGNXySjYzMkwAx71mm-TCTI4OH5uVQfrFS8&usqp=CAU" alt="Thumbnail 2" class="thumbnail">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReUHbLiwF1jwaJXlfyFrxB4TDbH1g9ZDLrEQAjjmOCXtL-nLc-uGEmxA60x2yowEW9NHg&usqp=CAU" alt="Thumbnail 3" class="thumbnail">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToDmZxO1uX-1z71zyz8PqG5fO83oN6_uRMKA&s" alt="Thumbnail 4" class="thumbnail">
+                        </div>
+                    </div>
+                    <div class="card card-1">
+                    </div>
+                    <!-- Bảng lịch khởi hành trong col-md-8 -->
+                    <div class="tour-schedule-pricing mt-4">
+                        <h3>Lịch khởi hành & giá tour</h3>
+                        <div class="table-responsive">
+                            <table class="schedule-table">
+                                <thead>
+                                    <tr>
+                                        <th>Ngày khởi hành</th>
+                                        <th>Ngày về</th>
+                                        <th>Giá</th>
+                                        <th>Tình trạng chỗ</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (ViewBag.ChiTietTour != null)
+                                    {
+                                        <tr>
+                                            <td>@ViewBag.ChiTietTour.NgayKhoiHanh.ToString("dd/MM/yyyy")</td>
+                                            <td>@ViewBag.ChiTietTour.NgayKetThuc.ToString("dd/MM/yyyy")</td>
+                                            <td class="price">@ViewBag.ChiTietTour.GiaTour.ToString("#,##0") VNĐ</td>
+                                            <td>Còn @ViewBag.ChiTietTour.SoCho chỗ</td>
+                                            <td><a href="#" class="info-btn"><i class="fas fa-info-circle"></i></a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="view-more mt-2">
+                            <button class="view-more-btn">Xem thêm <i class="fas fa-chevron-down"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-4">
+                    <div class="tour-selection">
+                        <h2>Lịch Trình và Giá Tour</h2>
+                        <div class="dates">
+                            <button class="date-btn active">@(ViewBag.ChiTietTour?.NgayKhoiHanh.ToString("dd/MM") ?? "N/A")</button>
+                        </div>
+
+                        <div class="passenger">
+                            <div class="label-col">
+                                <label for="adults">Người lớn <span>(> 10 tuổi)</span></label>
+                            </div>
+                            <div class="price-col">
+                                <span id="price-adult">@(ViewBag.ChiTietTour?.GiaTour.ToString("#,##0") ?? "0")</span>
+                            </div>
+                            <div class="quantity-col">
+                                <button class="minus">-</button>
+                                <input id="adults" value="1" min="0">
+                                <button class="plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="passenger">
+                            <div class="label-col">
+                                <label for="children">Trẻ em <span>(2 - 10 tuổi)</span></label>
+                            </div>
+                            <div class="price-col">
+                                <span id="price-child">@(ViewBag.ChiTietTour != null ? (ViewBag.ChiTietTour.GiaTour * 0.8).ToString("#,##0") : "0")</span>
+                            </div>
+                            <div class="quantity-col">
+                                <button class="minus">-</button>
+                                <input id="children" value="0" min="0">
+                                <button class="plus">+</button>
+                            </div>
+                        </div>
+
+                        <div class="passenger">
+                            <div class="label-col">
+                                <label for="infants">Trẻ nhỏ <span>(< 2 tuổi)</span></label>
+                            </div>
+                            <div class="price-col">
+                                <span id="price-infant">@(ViewBag.ChiTietTour != null ? (ViewBag.ChiTietTour.GiaTour * 0.5).ToString("#,##0") : "0")</span>
+                            </div>
+                            <div class="quantity-col">
+                                <button class="minus">-</button>
+                                <input id="infants" value="0" min="0">
+                                <button class="plus">+</button>
+                            </div>
+                        </div>
+
+
+                        <div class="total-price">
+                            <span>Tổng Giá Tour:</span>
+                            <span class="tal-price" id="total-price">@(ViewBag.ChiTietTour?.GiaTour.ToString("#,##0") ?? "0") VND</span></p>
+                        </div>
+
+                        <button class="btn-submit">Yêu cầu đặt</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container container-2 mt-4">
+            <h1>Tours du lịch liên quan</h1>
+            <div class="row">
+                <div class="col left-col">
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="hinh/a1.jpg" alt="Tour Image">
+                        </div>
+                        <div class="tour-details">
+                            <h3>Tour Đài Loan 5N4Đ: Hà Nội - Cao Hùng - Đài Trung - Đài Bắc - Du Thuyền Hồ Nhật Nguyệt</h3>
+                            <p class="tour-duration">5 Ngày 4 Đêm</p>
+                            <div class="tour-location">
+                                <span>Phố Cổ Thập Phần</span>
+                                <span>Du Thuyền Hồ Nhật Nguyệt</span>
+                                <span>Công Viên Dương Minh Sơn</span>
+                            </div>
+                            <p class="tour-price">12.490.000 VND</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mid-col">
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="hinh/a1.jpg" alt="Tour Image">
+                        </div>
+                        <div class="tour-details">
+                            <h3>Tour Đài Loan 5N4Đ: Hà Nội - Cao Hùng - Đài Trung - Đài Bắc - Du Thuyền Hồ Nhật Nguyệt</h3>
+                            <p class="tour-duration">5 Ngày 4 Đêm</p>
+                            <div class="tour-location">
+                                <span>Phố Cổ Thập Phần</span>
+                                <span>Du Thuyền Hồ Nhật Nguyệt</span>
+                                <span>Công Viên Dương Minh Sơn</span>
+                            </div>
+                            <p class="tour-price">12.490.000 VND</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col right-col">
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="hinh/a1.jpg" alt="Tour Image">
+                        </div>
+                        <div class="tour-details">
+                            <h3>Tour Đài Loan 5N4Đ: Hà Nội - Cao Hùng - Đài Trung - Đài Bắc - Du Thuyền Hồ Nhật Nguyệt</h3>
+                            <p class="tour-duration">5 Ngày 4 Đêm</p>
+                            <div class="tour-location">
+                                <span>Phố Cổ Thập Phần</span>
+                                <span>Du Thuyền Hồ Nhật Nguyệt</span>
+                                <span>Công Viên Dương Minh Sơn</span>
+                            </div>
+                            <p class="tour-price">12.490.000 VND</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <!-- Chat buttons -->
+   
+
+
+   
+</body>

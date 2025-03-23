@@ -5,8 +5,9 @@ namespace web_do_an.Models
     public class ChiTietTour
     {
         [Key]
-        public char MaCTTour { get; set; }
         [Required, StringLength(10)]
+        public char MaCTTour { get; set; }
+        
         public DateTime NgayKhoiHanh { get; set; }
         public DateTime NgayKetThuc { get; set; }
         public int SoChoDaDat { get; set; }

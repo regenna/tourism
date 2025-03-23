@@ -1,4 +1,5 @@
-﻿using web_do_an.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using web_do_an.Models;
 using web_do_an.Repositories.IRepository;
 
 namespace web_do_an.Repositories.EFRepository
