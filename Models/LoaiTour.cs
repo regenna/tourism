@@ -6,8 +6,9 @@ namespace web_do_an.Models
     public class LoaiTour
     {
         [Key]
-        public char MaLoai { get; set; }
         [Required, StringLength(10)]
+        public char MaLoai { get; set; }
+        
 
         public string TenLoai { get; set; }
 

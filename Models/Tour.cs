@@ -5,8 +5,9 @@ namespace web_do_an.Models
     public class Tour
     {
         [Key]
-        public char MaTour { get; set; }
         [Required, StringLength(10)]
+        public char MaTour { get; set; }
+        
         public string TenTour { get; set; }
         public int SoNgay { get; set; }
         public int SoDem { get; set; }

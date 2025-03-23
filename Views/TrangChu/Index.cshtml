@@ -1,0 +1,594 @@
+﻿
+
+<body>
+   
+    <nav id="navbar">
+        <div class="nav-container">
+
+            <a href="#" class="nav-logo">Vietnam Travel</a>
+            <ul class="nav-menu">
+                <li><a href="#destinations">Điểm Đến</a></li>
+                <li><a href="#services">Dịch Vụ</a></li>
+                <li><a href="#about">Về Chúng Tôi</a></li>
+                <li><a href="#testimonials">Đánh Giá</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="parallax-header">
+        <div class="logo gradient-text">Vietnam Travel</div>
+        <div class="tagline" data-aos="fade-up" data-aos-delay="300">Khám phá vẻ đẹp tuyệt vời của Việt Nam</div>
+
+    </header>
+
+
+    <div class="container mx-auto p-6">
+        <h1 class="section-title logo" data-aos="fade-down" data-aos-duration="300">Tour du lịch nổi bật</h1>
+        <br>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 featured-tours">
+            <!-- Hotel Card 1 -->
+            <div class="card bg-white rounded-xl overflow-hidden shadow-lg tour-card h-full" data-aos="fade-up"
+                 data-aos-duration="300">
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img src="../hinh/vinhhalong/vinhhalong.jpg" alt="Vinh Ha Long 1"
+                                 class="w-full object-cover">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../hinh/vinhhalong/vhl1.jpg" alt="Vinh Ha Long 2" class="w-full object-cover">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../hinh/vinhhalong/vhl2.jpg" alt="Vinh Ha Long 3" class="w-full object-cover">
+                        </div>
+                    </div>
+                    <div class="flex justify-between absolute inset-x-0 top-1/2 transform -translate-y-1/2 z-10 px-4">
+                        <button class="carousel-control carousel-prev bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
+                                type="button"
+                                onclick="prevSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
+                            <span class="text-xl">&#9664;</span>
+                        </button>
+                        <button class="carousel-control carousel-next bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
+                                type="button"
+                                onclick="nextSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
+                            <span class="text-xl">&#9654;</span>
+                        </button>
+                    </div>
+                    <div class="carousel-indicators absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
+                        <span class="dot w-2 h-2 rounded-full bg-white"></span>
+                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
+                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col">
+                    <h3 class="text-lg font-bold">Vịnh Hạ Long</h3>
+                    <p class="text-sm text-gray-500">Quảng Ninh</p>
+                    <p class="text-green-500 font-bold">9.6 Tuyệt vời (3,731 đánh giá)</p>
+                    <p class="text-lg font-semibold text-gray-700">
+                        2.500.000₫ <span class="line-through text-gray-400">3.780.000₫</span>
+                    </p>
+                    <p class="text-sm text-gray-500">Bao gồm thuế & phí</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4 w-full hover-button">Đặt Ngay</button>
+                </div>
+            </div>
+
+            <!-- Hotel Card 2 -->
+            <div class="card bg-white rounded-xl overflow-hidden shadow-lg tour-card h-full" data-aos="fade-up"
+                 data-aos-duration="300">
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/300?text=Image+1" alt="Hotel"
+                                 class="w-full object-cover">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/300?text=Image+2" alt="Hotel"
+                                 class="w-full object-cover">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/300?text=Image+3" alt="Hotel"
+                                 class="w-full object-cover">
+                        </div>
+                    </div>
+                    <div class="flex justify-between absolute inset-x-0 top-1/2 transform -translate-y-1/2 z-10 px-4">
+                        <button class="carousel-control carousel-prev bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
+                                type="button"
+                                onclick="prevSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
+                            <span class="text-xl">&#9664;</span>
+                        </button>
+                        <button class="carousel-control carousel-next bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
+                                type="button"
+                                onclick="nextSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
+                            <span class="text-xl">&#9654;</span>
+                        </button>
+                    </div>
+                    <div class="carousel-indicators absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
+                        <span class="dot w-2 h-2 rounded-full bg-white"></span>
+                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
+                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col">
+                    <h3 class="text-lg font-bold">Phố Cổ Hội An</h3>
+                    <p class="text-sm text-gray-500">Quảng Nam</p>
+                    <p class="text-green-500 font-bold">9.6 Tuyệt vời (1,004 đánh giá)</p>
+                    <p class="text-lg font-semibold text-gray-700">
+                        1.800.000₫ <span class="line-through text-gray-400">2.420.000₫</span>
+                    </p>
+                    <p class="text-sm text-gray-500">Bao gồm thuế & phí</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4 w-full hover-button">Đặt Ngay</button>
+                </div>
+            </div>
+
+            <!-- Hotel Card 3 -->
+            <div class="card bg-white rounded-xl overflow-hidden shadow-lg tour-card h-full" data-aos="fade-up"
+                 data-aos-duration="300">
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/300" alt="Hotel" class="w-full object-cover">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/300?text=Image+2" alt="Hotel"
+                                 class="w-full object-cover">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/300?text=Image+3" alt="Hotel"
+                                 class="w-full object-cover">
+                        </div>
+                    </div>
+                    <div class="flex justify-between absolute inset-x-0 top-1/2 transform -translate-y-1/2 z-10 px-4">
+                        <button class="carousel-control carousel-prev bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
+                                type="button"
+                                onclick="prevSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
+                            <span class="text-xl">&#9664;</span>
+                        </button>
+                        <button class="carousel-control carousel-next bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
+                                type="button"
+                                onclick="nextSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
+                            <span class="text-xl">&#9654;</span>
+                        </button>
+                    </div>
+                    <div class="carousel-indicators absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
+                        <span class="dot w-2 h-2 rounded-full bg-white"></span>
+                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
+                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col">
+                    <h3 class="text-lg font-bold">Sapa</h3>
+                    <p class="text-sm text-gray-500">Lào Cai</p>
+                    <p class="text-green-500 font-bold">9.0 Tuyệt vời (202 đánh giá)</p>
+                    <p class="text-lg font-semibold text-gray-700">
+                        2.200.000₫ <span class="line-through text-gray-400">2.670.000₫</span>
+                    </p>
+                    <p class="text-sm text-gray-500">Bao gồm thuế & phí</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4 w-full hover-button">Đặt Ngay</button>
+                </div>
+            </div>
+
+            <!-- Hotel Card 4 -->
+            <div class="card bg-white rounded-xl overflow-hidden shadow-lg tour-card h-full" data-aos="fade-up"
+                 data-aos-duration="300">
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/300" alt="Hotel" class="w-full object-cover">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/300?text=Image+2" alt="Hotel"
+                                 class="w-full object-cover">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://via.placeholder.com/300?text=Image+3" alt="Hotel"
+                                 class="w-full object-cover">
+                        </div>
+                    </div>
+                    <div class="flex justify-between absolute inset-x-0 top-1/2 transform -translate-y-1/2 z-10 px-4">
+                        <button class="carousel-control carousel-prev bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
+                                type="button"
+                                onclick="prevSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
+                            <span class="text-xl">&#9664;</span>
+                        </button>
+                        <button class="carousel-control carousel-next bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
+                                type="button"
+                                onclick="nextSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
+                            <span class="text-xl">&#9654;</span>
+                        </button>
+                    </div>
+                    <div class="carousel-indicators absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
+                        <span class="dot w-2 h-2 rounded-full bg-white"></span>
+                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
+                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col">
+                    <h3 class="text-lg font-bold">Đảo Phú Quốc</h3>
+                    <p class="text-sm text-gray-500">Kiên Giang</p>
+                    <p class="text-green-500 font-bold">9.4 Tuyệt vời (601 đánh giá)</p>
+                    <p class="text-lg font-semibold text-gray-700">
+                        3.200.000₫ <span class="line-through text-gray-400">4.260.000₫</span>
+                    </p>
+                    <p class="text-sm text-gray-500">Bao gồm thuế & phí</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4 w-full hover-button">Đặt Ngay</button>
+                </div>
+            </div>
+        </div>
+        <div class="more-button">
+            <a href="link-cua-ban.html" class="hover-button">Xem thêm</a>
+        </div>
+
+
+    </div>
+
+
+
+
+    <div class="container">
+        <section id="destinations">
+            <h2 class="section-title" data-aos="fade-up">Điểm Đến Nổi Bật</h2>
+            <div class="destinations">
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="../hinh/vinhhalong.jpg" alt="Hạ Long Bay" class="destination-img">
+                    <div class="destination-content">
+                        <h3 class="destination-title">Vịnh Hạ Long</h3>
+                        <p class="destination-desc">
+                            Khám phá kỳ quan thiên nhiên thế giới với hàng nghìn hòn đảo đá vôi
+                            tuyệt đẹp và hang động kỳ ảo.
+                        </p>
+                        <p class="destination-price">Từ 2,500,000 VNĐ</p>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="../hinh/phocohoian.png" alt="Hoi An" class="destination-img">
+                    <div class="destination-content">
+                        <h3 class="destination-title">Phố Cổ Hội An</h3>
+                        <p class="destination-desc">
+                            Thành phố cổ quyến rũ với đèn lồng đầy màu sắc, kiến trúc cổ và văn
+                            hóa ẩm thực phong phú.
+                        </p>
+                        <p class="destination-price">Từ 1,800,000 VNĐ</p>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="300">
+                    <img src="/api/placeholder/400/300" alt="Sapa" class="destination-img">
+                    <div class="destination-content">
+                        <h3 class="destination-title">Sapa</h3>
+                        <p class="destination-desc">
+                            Thị trấn miền núi với ruộng bậc thang tuyệt đẹp, văn hóa dân tộc đa
+                            dạng và khung cảnh thiên nhiên hùng vĩ.
+                        </p>
+                        <p class="destination-price">Từ 2,200,000 VNĐ</p>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="400">
+                    <img src="/api/placeholder/400/300" alt="Mekong Delta" class="destination-img">
+                    <div class="destination-content">
+                        <h3 class="destination-title">Đồng Bằng Sông Cửu Long</h3>
+                        <p class="destination-desc">
+                            Khám phá cuộc sống sông nước, chợ nổi đặc trưng và vườn trái cây
+                            xanh tươi của miền Tây Nam Bộ.
+                        </p>
+                        <p class="destination-price">Từ 1,500,000 VNĐ</p>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/api/placeholder/400/300" alt="Phu Quoc" class="destination-img">
+                    <div class="destination-content">
+                        <h3 class="destination-title">Đảo Phú Quốc</h3>
+                        <p class="destination-desc">
+                            Thiên đường biển đảo với bãi biển cát trắng, nước biển trong xanh và
+                            hải sản tươi ngon.
+                        </p>
+                        <p class="destination-price">Từ 3,200,000 VNĐ</p>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/api/placeholder/400/300" alt="Hue" class="destination-img">
+                    <div class="destination-content">
+                        <h3 class="destination-title">Cố Đô Huế</h3>
+                        <p class="destination-desc">
+                            Thành phố di sản với Đại Nội, lăng tẩm vua chúa và ẩm thực cung đình
+                            đặc sắc.
+                        </p>
+                        <p class="destination-price">Từ 1,900,000 VNĐ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2 class="section-title" data-aos="fade-up">Dịch Vụ Du Lịch Của Chúng Tôi</h2>
+            <div class="services">
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-hotel"></i></div>
+                    <h3 class="service-title">Khách Sạn & Resort</h3>
+                    <p class="service-desc">Đặt phòng tại các khách sạn và resort cao cấp với giá ưu đãi tốt nhất.</p>
+                </div>
+
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-bus"></i></div>
+                    <h3 class="service-title">Tour Du Lịch</h3>
+                    <p class="service-desc">Các tour du lịch đa dạng, phù hợp với mọi nhu cầu và ngân sách.</p>
+                </div>
+
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-plane"></i></div>
+                    <h3 class="service-title">Vé Máy Bay</h3>
+                    <p class="service-desc">Đặt vé máy bay nội địa và quốc tế với mức giá cạnh tranh.</p>
+                </div>
+
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="service-icon"><i class="fas fa-utensils"></i></div>
+                    <h3 class="service-title">Ẩm Thực</h3>
+                    <p class="service-desc">Khám phá ẩm thực đặc sắc của từng vùng miền Việt Nam.</p>
+                </div>
+
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="service-icon"><i class="fas fa-taxi"></i></div>
+                    <h3 class="service-title">Đón Tiễn Sân Bay</h3>
+                    <p class="service-desc">Dịch vụ đón tiễn sân bay chuyên nghiệp, đúng giờ.</p>
+                </div>
+
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="service-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="service-title">Tour Gia Đình</h3>
+                    <p class="service-desc">Các tour được thiết kế đặc biệt dành cho gia đình có trẻ nhỏ.</p>
+                </div>
+
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="service-icon"><i class="fas fa-swimmer"></i></div>
+                    <h3 class="service-title">Hoạt Động Giải Trí</h3>
+                    <p class="service-desc">Đa dạng các hoạt động giải trí, thể thao và văn hóa.</p>
+                </div>
+
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h3 class="service-title">Hướng Dẫn Viên</h3>
+                    <p class="service-desc">Đội ngũ hướng dẫn viên chuyên nghiệp, nhiều kinh nghiệm.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title" data-aos="fade-up">Về Chúng Tôi</h2>
+            <div class="about">
+                <div class="about-img" data-aos="fade-right">
+                    <img src="/api/placeholder/600/400" alt="About Vietnam Travel">
+                </div>
+                <div class="about-content" data-aos="fade-left">
+                    <h3 class="about-title">Vietnam Travel - Đồng hành cùng trải nghiệm của bạn</h3>
+                    <p class="about-desc">
+                        Vietnam Travel tự hào là công ty du lịch hàng đầu Việt Nam với hơn 15 năm kinh
+                        nghiệm trong lĩnh vực du lịch. Chúng tôi cam kết mang đến cho khách hàng những trải nghiệm du
+                        lịch độc đáo, chất lượng và đáng nhớ.
+                    </p>
+                    <p class="about-desc">
+                        Với đội ngũ nhân viên chuyên nghiệp, tận tâm cùng mạng lưới đối tác rộng khắp,
+                        chúng tôi tự tin đáp ứng mọi nhu cầu du lịch của quý khách, từ tour tiêu chuẩn đến tour thiết kế
+                        riêng.
+                    </p>
+                    <p class="about-desc">
+                        Sứ mệnh của chúng tôi là không chỉ đưa du khách đến những điểm đến, mà còn tạo
+                        ra những kỷ niệm đáng nhớ, kết nối du khách với con người, văn hóa và thiên nhiên Việt Nam.
+                    </p>
+                    <a href="#contact" class="cta-button hover-button">Liên Hệ Với Chúng Tôi</a>
+                </div>
+            </div>
+        </section>
+
+        
+    </div>
+
+    <!-- Script cho hiệu ứng -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Khởi tạo AOS với thời gian nhanh hơn
+        AOS.init({
+            duration: 500,
+            once: true,
+            offset: 50
+        });
+
+        // Hiệu ứng parallax cho header
+        window.addEventListener('scroll', function () {
+            const parallax = document.getElementById('parallax-header');
+            if (parallax) {
+                let scrollPosition = window.pageYOffset;
+                parallax.style.backgroundPositionY = (scrollPosition * 0.3) + 'px';
+            }
+        });
+
+        // Hiệu ứng sticky nav
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (navbar) {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('sticky');
+                } else {
+                    navbar.classList.remove('sticky');
+                }
+            }
+        });
+
+        // Khởi tạo carousel
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousels = document.querySelectorAll('.carousel');
+
+            // Tạo một ID duy nhất cho mỗi carousel để dễ quản lý
+            carousels.forEach((carousel, index) => {
+                carousel.setAttribute('data-carousel-id', `carousel-${index}`);
+                const slides = carousel.querySelectorAll('.carousel-item');
+                const inner = carousel.querySelector('.carousel-inner');
+                const dots = carousel.querySelectorAll('.carousel-indicators .dot');
+
+                // Khởi tạo thuộc tính dữ liệu cho mỗi carousel
+                carousel.dataset.currentSlide = 0;
+                carousel.dataset.totalSlides = slides.length;
+
+                // Xử lý event touch cho mobile
+                let touchStartX = 0;
+                let touchEndX = 0;
+
+                carousel.addEventListener('touchstart', function (e) {
+                    touchStartX = e.changedTouches[0].screenX;
+                });
+
+                carousel.addEventListener('touchend', function (e) {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe(carousel);
+                });
+
+                function handleSwipe(carousel) {
+                    if (touchEndX < touchStartX) {
+                        // Vuốt sang trái -> Chuyển sang slide tiếp theo
+                        nextSlide(carousel);
+                    } else if (touchEndX > touchStartX) {
+                        // Vuốt sang phải -> Chuyển sang slide trước
+                        prevSlide(carousel);
+                    }
+                }
+
+                // Đánh dấu slide đầu tiên là active
+                if (slides.length > 0) {
+                    updateDots(carousel, 0);
+                }
+
+                // Tự động chuyển slide sau mỗi 5 giây
+                setInterval(function () {
+                    nextSlide(carousel);
+                }, 5000);
+
+                // Thêm sự kiện click cho dots của carousel này
+                const dotsForThisCarousel = carousel.querySelectorAll('.carousel-indicators .dot');
+                dotsForThisCarousel.forEach((dot, dotIndex) => {
+                    dot.addEventListener('click', function () {
+                        goToSlide(carousel, dotIndex);
+                    });
+                });
+            });
+        });
+
+        // Hàm cập nhật trạng thái dots
+        function updateDots(carousel, activeIndex) {
+            // Chỉ cập nhật dots trong carousel được chỉ định
+            const dots = carousel.querySelectorAll('.carousel-indicators .dot');
+
+            dots.forEach((dot, index) => {
+                if (index === activeIndex) {
+                    dot.classList.remove('opacity-50');
+                } else {
+                    dot.classList.add('opacity-50');
+                }
+            });
+
+            // Lưu lại vị trí slide hiện tại
+            carousel.dataset.currentSlide = activeIndex;
+        }
+
+        // Hàm chuyển đến slide trước
+        function prevSlide(carousel) {
+            const slides = carousel.querySelectorAll('.carousel-item');
+            const inner = carousel.querySelector('.carousel-inner');
+            const slideWidth = slides[0].clientWidth;
+
+            // Lấy thông tin từ dataset
+            let currentSlide = parseInt(carousel.dataset.currentSlide || 0);
+            const totalSlides = slides.length;
+
+            // Tính toán slide mới
+            let newSlide = currentSlide - 1;
+            if (newSlide < 0) newSlide = totalSlides - 1;
+
+            // Cập nhật vị trí
+            const newPosition = -slideWidth * newSlide;
+            inner.style.transform = `translateX(${newPosition}px)`;
+
+            // Cập nhật dots
+            updateDots(carousel, newSlide);
+        }
+
+        // Hàm chuyển đến slide tiếp theo
+        function nextSlide(carousel) {
+            const slides = carousel.querySelectorAll('.carousel-item');
+            const inner = carousel.querySelector('.carousel-inner');
+            const slideWidth = slides[0].clientWidth;
+
+            // Lấy thông tin từ dataset
+            let currentSlide = parseInt(carousel.dataset.currentSlide || 0);
+            const totalSlides = slides.length;
+
+            // Tính toán slide mới
+            let newSlide = currentSlide + 1;
+            if (newSlide >= totalSlides) newSlide = 0;
+
+            // Cập nhật vị trí
+            const newPosition = -slideWidth * newSlide;
+            inner.style.transform = `translateX(${newPosition}px)`;
+
+            // Cập nhật dots
+            updateDots(carousel, newSlide);
+        }
+
+        // Hàm chuyển đến slide cụ thể
+        function goToSlide(carousel, index) {
+            const slides = carousel.querySelectorAll('.carousel-item');
+            const inner = carousel.querySelector('.carousel-inner');
+            const slideWidth = slides[0].clientWidth;
+
+            // Kiểm tra giới hạn index
+            if (index < 0) index = 0;
+            if (index >= slides.length) index = slides.length - 1;
+
+            // Cập nhật vị trí
+            const position = -slideWidth * index;
+            inner.style.transform = `translateX(${position}px)`;
+
+            // Cập nhật dots
+            updateDots(carousel, index);
+        }
+
+        // Hiệu ứng ripple cho các button
+        document.addEventListener('click', function (e) {
+            if (e.target.classList.contains('hover-button') || e.target.parentElement.classList.contains('hover-button')) {
+                const button = e.target.classList.contains('hover-button') ? e.target : e.target.parentElement;
+                const circle = document.createElement('span');
+                const diameter = Math.max(button.clientWidth, button.clientHeight);
+
+                circle.style.width = circle.style.height = `${diameter}px`;
+                circle.style.left = `${e.clientX - button.offsetLeft - diameter / 2}px`;
+                circle.style.top = `${e.clientY - button.offsetTop - diameter / 2}px`;
+                circle.classList.add('ripple');
+
+                const ripple = button.querySelector('.ripple');
+                if (ripple) {
+                    ripple.remove();
+                }
+
+                button.appendChild(circle);
+            }
+        });
+
+        // Smooth scroll cho các liên kết
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+    <script src="../src/controllers/homecontroller.js"></script>
+
+</body>

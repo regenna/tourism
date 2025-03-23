@@ -4,13 +4,14 @@ namespace web_do_an.Models
 {
     public class DanhGia
     {
-        public char MaTour { get; set; }
         [ForeignKey("MaTour")]
+        public char MaTour { get; set; }
+        
         public Tour? Tour { get; set; }
 
-
-        public char MaTK { get; set; }
         [ForeignKey("MaTK")]
+        public char MaTK { get; set; }
+       
         public TaiKhoan? TaiKhoan { get; set; }
 
 
