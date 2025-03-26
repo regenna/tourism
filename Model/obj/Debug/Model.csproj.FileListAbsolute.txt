@@ -1,0 +1,12 @@
+D:\chuongtrinhhoc\tourism\web\Model\bin\Debug\Model.dll.config
+D:\chuongtrinhhoc\tourism\web\Model\bin\Debug\Model.dll
+D:\chuongtrinhhoc\tourism\web\Model\bin\Debug\Model.pdb
+D:\chuongtrinhhoc\tourism\web\Model\bin\Debug\EntityFramework.dll
+D:\chuongtrinhhoc\tourism\web\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\chuongtrinhhoc\tourism\web\Model\bin\Debug\EntityFramework.xml
+D:\chuongtrinhhoc\tourism\web\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\chuongtrinhhoc\tourism\web\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\chuongtrinhhoc\tourism\web\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\chuongtrinhhoc\tourism\web\Model\obj\Debug\Model.csproj.Up2Date
+D:\chuongtrinhhoc\tourism\web\Model\obj\Debug\Model.dll
+D:\chuongtrinhhoc\tourism\web\Model\obj\Debug\Model.pdb
