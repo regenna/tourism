@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Interface</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/admin/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#"><b>Tour Nhà Thỏ</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="TrangChu.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="DanhSach.html">Tour</a></li>
+                    <li class="nav-item"><a class="nav-link" href="TaiKhoanUser.html">Tài Khoản</a></li>
+                    <li class="nav-item"><a class="nav-link" href="deals.html">Ưu Đãi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+        <div class="d-flex">
+            <!-- Left column -->
+            <div class="col-left">
+                <div class="resizable bg-light">
+                    <!-- Logo Section -->
+                    <div class="logo-section text-center mb-4">
+                        <img src="hinh/a1.jpg" alt="Logo" class="logo-img">
+                        <h5 class="mt-2">Mantis</h5>
+                    </div>
+                    <!-- Buttons Section -->
+                    <div class="nav-container">
+                        <div class="tab-item">
+                            <button class="btn" onclick="showContent(1); setActiveTab(this)">
+                                <i class="fas fa-home"></i>
+                                Tour
+                            </button>
+                        </div>
+
+                        <div class="tab-item">
+                            <button class="btn" onclick="showContent(2); setActiveTab(this)">
+                                <i class="fas fa-bus"></i>
+                                Phương Tiện
+                            </button>
+                        </div>
+
+                        <div class="tab-item">
+                            <button class="btn" onclick="showContent(3); setActiveTab(this)">
+                                <i class="fas fa-map-marked-alt"></i>
+                                Loại Tour
+                            </button>
+                        </div>
+
+                        <div class="tab-item">
+                            <button class="btn" onclick="showContent(4); setActiveTab(this)">
+                                <i class="fas fa-flag"></i>
+                                Điểm khởi hành
+                            </button>
+                        </div>
+
+                        <div class="tab-item">
+                            <button class="btn" onclick="showContent(5); setActiveTab(this)">
+                                <i class="fas fa-map-pin"></i>
+                                Điểm đếm
+                            </button>
+                        </div>
+                        <div class="tab-item">
+                            <button class="btn" onclick="showContent(6); setActiveTab(this)">
+                                <i class="fas fa-map-pin"></i>
+                                Phiếu đặt Tour
+                            </button>
+                        </div>
+                        <div class="tab-item">
+                            <button class="btn" onclick="showContent(7); setActiveTab(this)">
+                                <i class="fas fa-map-pin"></i>
+                                Tài khoản người dùng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <main>
+
+
+                <!-- Right column -->
+                <div class="col-right">
+                    <!-- Content Area -->
+                    <div class="content-area">
+                        <div id="dynamic-content">
+                            <!-- Cards will be dynamically added here -->
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </main>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="/js/admin/script.js"></script>></script>
+</body>
+
+</html>

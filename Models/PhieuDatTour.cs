@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace web_do_an.Models
 {
     public class PhieuDatTour
     {
         [Key]
-        [Required, StringLength(10)]
-        public char MaPDT { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int MaPDT { get; set; }
         
 
         public int SoNguoi { get; set; }
@@ -14,14 +15,14 @@ namespace web_do_an.Models
         public float TongTien { get; set; }
         public string DichVuTour { get; set; }
 
-        public int TrangThaiPDT { get; set; }
+        public bool? TrangThaiPDT { get; set; }
 
 
-        public char MaTK { get; set; }
+        public int MaTK { get; set; }
         public TaiKhoan? TaiKhoan { get; set; }
 
 
-        public char MaCTTour { get; set; }
+        public int MaCTTour { get; set; }
         public ChiTietTour? ChiTietTour { get; set; }
 
     }

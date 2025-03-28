@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace web_do_an.Models
 {
     public class Tour
     {
         [Key]
-        [Required, StringLength(10)]
-        public char MaTour { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int MaTour { get; set; }
         
         public string TenTour { get; set; }
         public int SoNgay { get; set; }
@@ -19,7 +20,7 @@ namespace web_do_an.Models
 
         public string TrangThaiTour { get; set; }
 
-        public char MaLoai { get; set; }
+        public int MaLoai { get; set; }
         public LoaiTour? LoaiTour { get; set; }
 
         public ICollection<DanhGia> DanhGias { get; set; }

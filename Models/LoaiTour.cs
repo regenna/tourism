@@ -1,13 +1,14 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace web_do_an.Models
 {
     public class LoaiTour
     {
         [Key]
-        [Required, StringLength(10)]
-        public char MaLoai { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int MaLoai { get; set; }
         
 
         public string TenLoai { get; set; }

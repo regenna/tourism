@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace web_do_an.Models
 {
     public class DiemDen
     {
         [Key]
-        [Required, StringLength(10)]
-        public char MaDD { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int MaDD { get; set; }
         
         public string TenDD { get; set; }
         public string MoTa { get; set; }

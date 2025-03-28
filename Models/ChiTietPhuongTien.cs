@@ -7,12 +7,12 @@ namespace web_do_an.Models
 
         [ForeignKey("MaCTTour")]
 
-        public char MaCTTour { get; set; }
+        public int MaCTTour { get; set; }
         
         public ChiTietTour? ChiTietTour { get; set; }
 
         [ForeignKey("MaPT")]
-        public char MaPT { get; set; }
+        public int MaPT { get; set; }
         
         public PhuongTienDC? PhuongTienDC { get; set; }
 

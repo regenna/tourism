@@ -1,259 +1,267 @@
 {
   "Files": [
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\web_do_an.bundle.scp.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\web_do_an.bundle.scp.css",
       "PackagePath": "staticwebassets\\web_do_an.9t2anlv8pk.bundle.scp.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\css\\mycss.css",
-      "PackagePath": "staticwebassets\\css\\mycss.css"
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\css\\admin\\mycss.css",
+      "PackagePath": "staticwebassets\\css\\admin\\mycss.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\css\\site.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\css\\admin\\styles.css",
+      "PackagePath": "staticwebassets\\css\\admin\\styles.css"
+    },
+    {
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\css\\view.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\css\\view.css",
       "PackagePath": "staticwebassets\\css\\view.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\favicon.ico",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\js\\JS.js",
-      "PackagePath": "staticwebassets\\js\\JS.js"
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\js\\admin\\JS.js",
+      "PackagePath": "staticwebassets\\js\\admin\\JS.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\js\\site.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\js\\admin\\script.js",
+      "PackagePath": "staticwebassets\\js\\admin\\script.js"
+    },
+    {
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\chuongtrinhhoc\\tourism\\web_do_an\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

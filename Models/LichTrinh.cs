@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace web_do_an.Models
 {
     public class LichTrinh
     {
         [Key]
-        [Required, StringLength(10)]
-        public char MaLT { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int MaLT { get; set; }
      
 
         public string TenLT { get; set; }
@@ -17,7 +18,7 @@ namespace web_do_an.Models
         public string TeHoatDongToi { get; set; }
 
 
-        public char MaCTTour { get; set; }
+        public int MaCTTour { get; set; }
         public ChiTietTour? ChiTietTour { get; set; }
 
 

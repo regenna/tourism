@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace web_do_an.Models
 {
@@ -6,13 +7,10 @@ namespace web_do_an.Models
     {
         [Key]
 
-        [Required, StringLength(10)]
-        public char MaDKH { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int MaDKH { get; set; }
 
-        [MaxLength(10)]
-        public int SDT { get; set; }
-      
-
+        
         public string TenDKH { get; set; }
      
         public string DC { get; set; }

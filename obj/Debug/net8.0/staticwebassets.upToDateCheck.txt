@@ -1,8 +1,10 @@
-wwwroot\css\mycss.css
+wwwroot\css\admin\mycss.css
+wwwroot\css\admin\styles.css
 wwwroot\css\site.css
 wwwroot\css\view.css
 wwwroot\favicon.ico
-wwwroot\js\JS.js
+wwwroot\js\admin\JS.js
+wwwroot\js\admin\script.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

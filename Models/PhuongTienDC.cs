@@ -1,12 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace web_do_an.Models
 {
     public class PhuongTienDC
     {
         [Key]
-        [Required, StringLength(10)]
-        public char MaPT { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int MaPT { get; set; }
        
 
         public string TenPT { get; set; }

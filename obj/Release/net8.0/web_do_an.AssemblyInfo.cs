@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("web_do_an")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20a4900ee8dd1ba19aeb6925dfbfee65dac24ae7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+abe8f9e7e166f64c06460185039caa8d40dc04b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("web_do_an")]
 [assembly: System.Reflection.AssemblyTitleAttribute("web_do_an")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

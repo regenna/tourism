@@ -24,11 +24,11 @@ namespace web_do_an.Migrations
 
             modelBuilder.Entity("web_do_an.Models.ChiTietLichTrinh", b =>
                 {
-                    b.Property<string>("MaDD")
-                        .HasColumnType("nvarchar(10)");
+                    b.Property<int>("MaDD")
+                        .HasColumnType("int");
 
-                    b.Property<string>("MaLT")
-                        .HasColumnType("nvarchar(10)");
+                    b.Property<int>("MaLT")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("Ngay")
                         .HasColumnType("datetime2");
@@ -42,11 +42,11 @@ namespace web_do_an.Migrations
 
             modelBuilder.Entity("web_do_an.Models.ChiTietPhuongTien", b =>
                 {
-                    b.Property<string>("MaCTTour")
-                        .HasColumnType("nvarchar(10)");
+                    b.Property<int>("MaCTTour")
+                        .HasColumnType("int");
 
-                    b.Property<string>("MaPT")
-                        .HasColumnType("nvarchar(10)");
+                    b.Property<int>("MaPT")
+                        .HasColumnType("int");
 
                     b.Property<int>("TongSL")
                         .HasColumnType("int");
@@ -60,21 +60,20 @@ namespace web_do_an.Migrations
 
             modelBuilder.Entity("web_do_an.Models.ChiTietTour", b =>
                 {
-                    b.Property<string>("MaCTTour")
+                    b.Property<int>("MaCTTour")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("DiemKhoiHanhMaDKH")
-                        .HasColumnType("nvarchar(10)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaCTTour"));
 
-                    b.Property<string>("MaDKH")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
+                    b.Property<int?>("DiemKhoiHanhMaDKH")
+                        .HasColumnType("int");
 
-                    b.Property<string>("MaTour")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
+                    b.Property<int>("MaDKH")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MaTour")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("NgayKetThuc")
                         .HasColumnType("datetime2");
@@ -85,8 +84,8 @@ namespace web_do_an.Migrations
                     b.Property<int>("SoChoDaDat")
                         .HasColumnType("int");
 
-                    b.Property<string>("TourMaTour")
-                        .HasColumnType("nvarchar(10)");
+                    b.Property<int?>("TourMaTour")
+                        .HasColumnType("int");
 
                     b.HasKey("MaCTTour");
 
@@ -99,20 +98,20 @@ namespace web_do_an.Migrations
 
             modelBuilder.Entity("web_do_an.Models.DanhGia", b =>
                 {
-                    b.Property<string>("MaTour")
-                        .HasColumnType("nvarchar(10)");
+                    b.Property<int>("MaTour")
+                        .HasColumnType("int");
 
-                    b.Property<string>("MaTK")
-                        .HasColumnType("nvarchar(10)");
+                    b.Property<int>("MaTK")
+                        .HasColumnType("int");
 
                     b.Property<string>("NoiDungDanhGia")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<float>("SoSao")
+                    b.Property<float?>("SoSao")
                         .HasColumnType("real");
 
                     b.Property<DateTime>("ThoiGianDanhGia")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2");
 
                     b.HasKey("MaTour", "MaTK");
@@ -124,10 +123,11 @@ namespace web_do_an.Migrations
 
             modelBuilder.Entity("web_do_an.Models.DiemDen", b =>
                 {
-                    b.Property<string>("MaDD")
+                    b.Property<int>("MaDD")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaDD"));
 
                     b.Property<string>("HinhAnh")
                         .IsRequired()
@@ -148,18 +148,15 @@ namespace web_do_an.Migrations
 
             modelBuilder.Entity("web_do_an.Models.DiemKhoiHanh", b =>
                 {
-                    b.Property<string>("MaDKH")
+                    b.Property<int>("MaDKH")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaDKH"));
 
                     b.Property<string>("DC")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("SDT")
-                        .HasMaxLength(10)
-                        .HasColumnType("int");
 
                     b.Property<string>("TenDKH")
                         .IsRequired()
@@ -172,13 +169,14 @@ namespace web_do_an.Migrations
 
             modelBuilder.Entity("web_do_an.Models.LichTrinh", b =>
                 {
-                    b.Property<string>("MaLT")
+                    b.Property<int>("MaLT")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("ChiTietTourMaCTTour")
-                        .HasColumnType("nvarchar(10)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaLT"));
+
+                    b.Property<int?>("ChiTietTourMaCTTour")
+                        .HasColumnType("int");
 
                     b.Property<string>("HoatDongChieu")
                         .IsRequired()
@@ -192,9 +190,8 @@ namespace web_do_an.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MaCTTour")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
+                    b.Property<int>("MaCTTour")
+                        .HasColumnType("int");
 
                     b.Property<string>("TeHoatDongToi")
                         .IsRequired()
@@ -213,10 +210,11 @@ namespace web_do_an.Migrations
 
             modelBuilder.Entity("web_do_an.Models.LoaiTour", b =>
                 {
-                    b.Property<string>("MaLoai")
+                    b.Property<int>("MaLoai")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaLoai"));
 
                     b.Property<string>("TenLoai")
                         .IsRequired()
@@ -229,25 +227,24 @@ namespace web_do_an.Migrations
 
             modelBuilder.Entity("web_do_an.Models.PhieuDatTour", b =>
                 {
-                    b.Property<string>("MaPDT")
+                    b.Property<int>("MaPDT")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("int");
 
-                    b.Property<string>("ChiTietTourMaCTTour")
-                        .HasColumnType("nvarchar(10)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaPDT"));
+
+                    b.Property<int?>("ChiTietTourMaCTTour")
+                        .HasColumnType("int");
 
                     b.Property<string>("DichVuTour")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MaCTTour")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
+                    b.Property<int>("MaCTTour")
+                        .HasColumnType("int");
 
-                    b.Property<string>("MaTK")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
+                    b.Property<int>("MaTK")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("NgayDat")
                         .HasColumnType("datetime2");
@@ -255,14 +252,14 @@ namespace web_do_an.Migrations
                     b.Property<int>("SoNguoi")
                         .HasColumnType("int");
 
-                    b.Property<string>("TaiKhoanMaTK")
-                        .HasColumnType("nvarchar(10)");
+                    b.Property<int?>("TaiKhoanMaTK")
+                        .HasColumnType("int");
 
                     b.Property<float>("TongTien")
                         .HasColumnType("real");
 
-                    b.Property<int>("TrangThaiPDT")
-                        .HasColumnType("int");
+                    b.Property<bool?>("TrangThaiPDT")
+                        .HasColumnType("bit");
 
                     b.HasKey("MaPDT");
 
@@ -275,10 +272,11 @@ namespace web_do_an.Migrations
 
             modelBuilder.Entity("web_do_an.Models.PhuongTienDC", b =>
                 {
-                    b.Property<string>("MaPT")
+                    b.Property<int>("MaPT")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaPT"));
 
                     b.Property<int>("SoLuongCho")
                         .HasColumnType("int");
@@ -294,13 +292,23 @@ namespace web_do_an.Migrations
 
             modelBuilder.Entity("web_do_an.Models.TaiKhoan", b =>
                 {
-                    b.Property<string>("MaTK")
+                    b.Property<int>("MaTK")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaTK"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("DC")
-                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LoaiTK")
@@ -312,19 +320,21 @@ namespace web_do_an.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SDT")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SoTourDaDat")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TenKH")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TrangThaiTK")
-                        .HasColumnType("int");
+                    b.Property<string>("TenTK")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool?>("TrangThaiTK")
+                        .HasColumnType("bit");
 
                     b.HasKey("MaTK");
 
@@ -333,10 +343,11 @@ namespace web_do_an.Migrations
 
             modelBuilder.Entity("web_do_an.Models.Tour", b =>
                 {
-                    b.Property<string>("MaTour")
+                    b.Property<int>("MaTour")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(10)
-                        .HasColumnType("nvarchar(10)");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaTour"));
 
                     b.Property<string>("AnhDaiDien")
                         .IsRequired()
@@ -349,12 +360,11 @@ namespace web_do_an.Migrations
                     b.Property<float>("Gia")
                         .HasColumnType("real");
 
-                    b.Property<string>("LoaiTourMaLoai")
-                        .HasColumnType("nvarchar(10)");
+                    b.Property<int?>("LoaiTourMaLoai")
+                        .HasColumnType("int");
 
-                    b.Property<string>("MaLoai")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
+                    b.Property<int>("MaLoai")
+                        .HasColumnType("int");
 
                     b.Property<string>("MoTaTour")
                         .IsRequired()
