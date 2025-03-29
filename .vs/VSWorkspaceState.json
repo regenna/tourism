@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Areas",
-    "\\Areas\\Admin",
-    "\\Areas\\Admin\\Controllers",
+    "\\Controllers",
     "\\Repositories",
     "\\Repositories\\EFRepository",
     "\\Repositories\\IRepository",
+    "\\Views",
+    "\\Views\\ChiTiet",
     "\\wwwroot",
     "\\wwwroot\\css",
     "\\wwwroot\\css\\admin"
   ],
-  "SelectedNode": "\\Areas\\Admin\\Controllers\\LoginController.cs",
+  "SelectedNode": "\\Views\\ChiTiet\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

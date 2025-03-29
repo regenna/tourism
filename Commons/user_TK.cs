@@ -1,4 +1,4 @@
-﻿using web_do_an.Models;
+﻿using web_do_an.Models.Model_TT;
 
 namespace web_do_an.user
 {

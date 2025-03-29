@@ -13,8 +13,16 @@
       "PackagePath": "staticwebassets\\css\\admin\\styles.css"
     },
     {
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\css\\chitiet\\mycss.css",
+      "PackagePath": "staticwebassets\\css\\chitiet\\mycss.css"
+    },
+    {
       "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\css\\user\\styles.css",
+      "PackagePath": "staticwebassets\\css\\user\\styles.css"
     },
     {
       "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\css\\view.css",
@@ -33,8 +41,16 @@
       "PackagePath": "staticwebassets\\js\\admin\\script.js"
     },
     {
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\js\\chitiet\\JS.js",
+      "PackagePath": "staticwebassets\\js\\chitiet\\JS.js"
+    },
+    {
       "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\js\\user\\script.js",
+      "PackagePath": "staticwebassets\\js\\user\\script.js"
     },
     {
       "Id": "D:\\chuongtrinhhoc\\tourism\\1\\tourism\\wwwroot\\lib\\bootstrap\\LICENSE",

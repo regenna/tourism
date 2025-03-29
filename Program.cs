@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
-using web_do_an.Models;
 using System.Reflection;
 using web_do_an.user;
+using web_do_an.Models.Model_TT;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));

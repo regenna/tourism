@@ -1,594 +1,837 @@
 ﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vietnam Travel - Khám phá vẻ đẹp Việt Nam</title>
+	<link rel="stylesheet" href="/css/view.css">
+   
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
 
 <body>
-   
-    <nav id="navbar">
-        <div class="nav-container">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
 
-            <a href="#" class="nav-logo">Vietnam Travel</a>
+    <!-- Modern Header như trong ảnh -->
+    <nav class="modern-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <div class="logo-icon"><i class="fas fa-sailboat"></i></div>
+                Travel<span>.</span>
+            </a>
             <ul class="nav-menu">
-                <li><a href="#destinations">Điểm Đến</a></li>
-                <li><a href="#services">Dịch Vụ</a></li>
-                <li><a href="#about">Về Chúng Tôi</a></li>
-                <li><a href="#testimonials">Đánh Giá</a></li>
-                <li><a href="#contact">Liên Hệ</a></li>
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="#">PACKAGES</a></li>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">PAGES</a></li>
+                <li><a href="#">NEWS</a></li>
+                <li><a href="#">CONTACT</a></li>
             </ul>
+            <div class="nav-right">
+                <a href="#" class="book-now">BOOK NOW</a>
+                <button class="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <header id="parallax-header">
-        <div class="logo gradient-text">Vietnam Travel</div>
-        <div class="tagline" data-aos="fade-up" data-aos-delay="300">Khám phá vẻ đẹp tuyệt vời của Việt Nam</div>
+    <!-- Hero Section với búng đường mờ -->
+    <header class="modern-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Search your next Holiday</h1>
+            <p class="hero-subtitle">CHECK OUR BEST PROMOTIONS</p>
 
+            <div class="search-container">
+                <div class="search-location">
+                    <select id="locationSelect">
+                        <option value="">Từ Hà Nội</option>
+                        <option value="hcm">Từ Hồ Chí Minh</option>
+                        <option value="danang">Từ Đà Nẵng</option>
+                        <option value="nhatrang">Từ Nha Trang</option>
+                        <option value="phuquoc">Từ Phú Quốc</option>
+                    </select>
+                </div>
+                <div class="search-destination">
+                    <input type="text" placeholder="Bạn muốn đi đâu?">
+                </div>
+                <button class="search-button">
+                    <i class="fas fa-search"></i> TÌM TOUR NGAY
+                </button>
+            </div>
+
+            <div class="category-icons">
+                <div class="icon-box">
+                    <div class="icon-circle">
+                        <i class="fas fa-cocktail"></i>
+                    </div>
+                    <span>RELAX</span>
+                </div>
+                <div class="icon-box">
+                    <div class="icon-circle">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <span>CULTURAL</span>
+                </div>
+                <div class="icon-box">
+                    <div class="icon-circle">
+                        <i class="fas fa-hiking"></i>
+                    </div>
+                    <span>SPORT</span>
+                </div>
+                <div class="icon-box">
+                    <div class="icon-circle">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <span>HISTORY</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hiệu ứng sọc sáng chạy ngang qua -->
+        <div class="light-beam"></div>
     </header>
 
+    <section class="popular-tours">
+        <div class="container mx-auto p-6">
+            <h2 class="section-title" data-aos="fade-up">Tour du lịch nổi bật</h2>
+            <p class="section-subtitle" data-aos="fade-up">Khám phá những điểm đến đang được yêu thích nhất</p>
 
-    <div class="container mx-auto p-6">
-        <h1 class="section-title logo" data-aos="fade-down" data-aos-duration="300">Tour du lịch nổi bật</h1>
-        <br>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 featured-tours">
-            <!-- Hotel Card 1 -->
-            <div class="card bg-white rounded-xl overflow-hidden shadow-lg tour-card h-full" data-aos="fade-up"
-                 data-aos-duration="300">
-                <div class="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item">
-                            <img src="../hinh/vinhhalong/vinhhalong.jpg" alt="Vinh Ha Long 1"
-                                 class="w-full object-cover">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../hinh/vinhhalong/vhl1.jpg" alt="Vinh Ha Long 2" class="w-full object-cover">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../hinh/vinhhalong/vhl2.jpg" alt="Vinh Ha Long 3" class="w-full object-cover">
+            <div class="swiper tourSwiper" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper">
+                    <!-- Tour Card 1 -->
+                    <div class="swiper-slide">
+                        <div class="card bg-white rounded-xl overflow-hidden shadow-lg">
+                            <div class="card-tag">-30%</div>
+                            <div class="card-img">
+                                <img src="../hinh/vinhhalong/vinhhalong.jpg" alt="Vịnh Hạ Long" class="w-full h-60 object-cover">
+                            </div>
+                            <div class="p-4">
+                                <span class="location"><i class="fas fa-map-marker-alt"></i> Hạ Long, Quảng Ninh</span>
+                                <h3 class="text-lg font-bold">Tour Vịnh Hạ Long 3 ngày 2 đêm</h3>
+                                <div class="flex items-center text-yellow-500 my-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="text-gray-500 ml-2">(236 đánh giá)</span>
+                                </div>
+                                <div class="flex justify-between items-center mt-4">
+                                    <p class="text-lg font-semibold text-gray-700"><span class="text-green-600">2,500,000₫</span> <span class="line-through text-gray-400">3,200,000₫</span></p>
+                                    <button class="book-btn">Đặt ngay</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex justify-between absolute inset-x-0 top-1/2 transform -translate-y-1/2 z-10 px-4">
-                        <button class="carousel-control carousel-prev bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
-                                type="button"
-                                onclick="prevSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
-                            <span class="text-xl">&#9664;</span>
-                        </button>
-                        <button class="carousel-control carousel-next bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
-                                type="button"
-                                onclick="nextSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
-                            <span class="text-xl">&#9654;</span>
-                        </button>
+
+                    <!-- Tour Card 2 -->
+                    <div class="swiper-slide">
+                        <div class="card bg-white rounded-xl overflow-hidden shadow-lg">
+                            <div class="card-tag hot">Hot</div>
+                            <div class="card-img">
+                                <img src="../hinh/phocohoian.png" alt="Hội An" class="w-full h-60 object-cover">
+                            </div>
+                            <div class="p-4">
+                                <span class="location"><i class="fas fa-map-marker-alt"></i> Hội An, Quảng Nam</span>
+                                <h3 class="text-lg font-bold">Khám phá Phố cổ Hội An</h3>
+                                <div class="flex items-center text-yellow-500 my-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="text-gray-500 ml-2">(187 đánh giá)</span>
+                                </div>
+                                <div class="flex justify-between items-center mt-4">
+                                    <p class="text-lg font-semibold text-gray-700"><span class="text-green-600">1,800,000₫</span> <span class="line-through text-gray-400">2,500,000₫</span></p>
+                                    <button class="book-btn">Đặt ngay</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carousel-indicators absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
-                        <span class="dot w-2 h-2 rounded-full bg-white"></span>
-                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
-                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
+
+                    <!-- Thêm các tour cards khác tương tự -->
+                    <!-- Tour Card 3 -->
+                    <div class="swiper-slide">
+                        <div class="card bg-white rounded-xl overflow-hidden shadow-lg">
+                            <div class="card-img">
+                                <img src="https://via.placeholder.com/400x300" alt="Sapa" class="w-full h-60 object-cover">
+                            </div>
+                            <div class="p-4">
+                                <span class="location"><i class="fas fa-map-marker-alt"></i> Sapa, Lào Cai</span>
+                                <h3 class="text-lg font-bold">Sapa - Ruộng bậc thang mùa vàng</h3>
+                                <div class="flex items-center text-yellow-500 my-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="text-gray-500 ml-2">(153 đánh giá)</span>
+                                </div>
+                                <div class="flex justify-between items-center mt-4">
+                                    <p class="text-lg font-semibold text-gray-700"><span class="text-green-600">2,200,000₫</span></p>
+                                    <button class="book-btn">Đặt ngay</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tour Card 4 -->
+                    <div class="swiper-slide">
+                        <div class="card bg-white rounded-xl overflow-hidden shadow-lg">
+                            <div class="card-tag">-15%</div>
+                            <div class="card-img">
+                                <img src="https://via.placeholder.com/400x300" alt="Phú Quốc" class="w-full h-60 object-cover">
+                            </div>
+                            <div class="p-4">
+                                <span class="location"><i class="fas fa-map-marker-alt"></i> Phú Quốc, Kiên Giang</span>
+                                <h3 class="text-lg font-bold">Thiên đường biển đảo Phú Quốc</h3>
+                                <div class="flex items-center text-yellow-500 my-2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="text-gray-500 ml-2">(296 đánh giá)</span>
+                                </div>
+                                <div class="flex justify-between items-center mt-4">
+                                    <p class="text-lg font-semibold text-gray-700"><span class="text-green-600">3,200,000₫</span> <span class="line-through text-gray-400">3,800,000₫</span></p>
+                                    <button class="book-btn">Đặt ngay</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="p-4 flex flex-col">
-                    <h3 class="text-lg font-bold">Vịnh Hạ Long</h3>
-                    <p class="text-sm text-gray-500">Quảng Ninh</p>
-                    <p class="text-green-500 font-bold">9.6 Tuyệt vời (3,731 đánh giá)</p>
-                    <p class="text-lg font-semibold text-gray-700">
-                        2.500.000₫ <span class="line-through text-gray-400">3.780.000₫</span>
-                    </p>
-                    <p class="text-sm text-gray-500">Bao gồm thuế & phí</p>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4 w-full hover-button">Đặt Ngay</button>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="more-button" data-aos="fade-up">
+                <a href="#">Xem tất cả các tour <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="tour-categories">
+        <div class="container mx-auto p-6">
+            <h2 class="section-title" data-aos="fade-up">Tour du lịch theo chủ đề</h2>
+            <p class="section-subtitle" data-aos="fade-up">Lựa chọn tour phù hợp với sở thích và phong cách của bạn</p>
+
+            <div class="categories-tabs" data-aos="fade-up">
+                <button class="category-tab active" data-category="beach">Du lịch biển</button>
+                <button class="category-tab" data-category="culture">Du lịch văn hóa</button>
+                <button class="category-tab" data-category="adventure">Du lịch mạo hiểm</button>
+                <button class="category-tab" data-category="luxury">Du lịch cao cấp</button>
+            </div>
+
+            <!-- Danh sách các tour biển -->
+            <div class="category-content active" id="beach">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                    <!-- Tour 1 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?beach,vietnam" alt="Phú Quốc">
+                            <div class="card-badge">Bán chạy</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.7 (124)</span>
+                            </div>
+                            <h3 class="card-title">Khám phá thiên đường Phú Quốc</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Phú Quốc</span>
+                                <span><i class="fas fa-calendar-alt"></i> 4 ngày 3 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">3,450,000₫</span>
+                                <span class="old-price">4,500,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
+                        </div>
+                    </div>
+
+                    <!-- Tour 2 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?nhatrang" alt="Nha Trang">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.0 (86)</span>
+                            </div>
+                            <h3 class="card-title">Khám phá vịnh Nha Trang</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Nha Trang</span>
+                                <span><i class="fas fa-calendar-alt"></i> 3 ngày 2 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">2,750,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
+                        </div>
+                    </div>
+
+                    <!-- Tour 3 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?danang,beach" alt="Đà Nẵng">
+                            <div class="card-badge">Giảm 20%</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (215)</span>
+                            </div>
+                            <h3 class="card-title">Bãi biển Mỹ Khê - Đà Nẵng</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Đà Nẵng</span>
+                                <span><i class="fas fa-calendar-alt"></i> 4 ngày 3 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">3,200,000₫</span>
+                                <span class="old-price">4,000,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
+                        </div>
+                    </div>
+
+                    <!-- Tour 4 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?muine" alt="Mũi Né">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.2 (94)</span>
+                            </div>
+                            <h3 class="card-title">Đồi cát Mũi Né - Phan Thiết</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Phan Thiết</span>
+                                <span><i class="fas fa-calendar-alt"></i> 3 ngày 2 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">2,350,000₫</span>
+                                <span class="old-price">2,900,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Hotel Card 2 -->
-            <div class="card bg-white rounded-xl overflow-hidden shadow-lg tour-card h-full" data-aos="fade-up"
-                 data-aos-duration="300">
-                <div class="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item">
-                            <img src="https://via.placeholder.com/300?text=Image+1" alt="Hotel"
-                                 class="w-full object-cover">
+            <!-- Danh sách tour văn hóa -->
+            <div class="category-content" id="culture">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                    <!-- Tour 1 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?hue,palace" alt="Huế">
+                            <div class="card-badge">Tour mới</div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="https://via.placeholder.com/300?text=Image+2" alt="Hotel"
-                                 class="w-full object-cover">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://via.placeholder.com/300?text=Image+3" alt="Hotel"
-                                 class="w-full object-cover">
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.6 (142)</span>
+                            </div>
+                            <h3 class="card-title">Khám phá Cố đô Huế</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Huế</span>
+                                <span><i class="fas fa-calendar-alt"></i> 2 ngày 1 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">1,850,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
                         </div>
                     </div>
-                    <div class="flex justify-between absolute inset-x-0 top-1/2 transform -translate-y-1/2 z-10 px-4">
-                        <button class="carousel-control carousel-prev bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
-                                type="button"
-                                onclick="prevSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
-                            <span class="text-xl">&#9664;</span>
-                        </button>
-                        <button class="carousel-control carousel-next bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
-                                type="button"
-                                onclick="nextSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
-                            <span class="text-xl">&#9654;</span>
-                        </button>
+
+                    <!-- Tour 2 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?hoian" alt="Hội An">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0 (231)</span>
+                            </div>
+                            <h3 class="card-title">Khám phá phố cổ Hội An</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Quảng Nam</span>
+                                <span><i class="fas fa-calendar-alt"></i> 3 ngày 2 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">2,450,000₫</span>
+                                <span class="old-price">2,900,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
+                        </div>
                     </div>
-                    <div class="carousel-indicators absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
-                        <span class="dot w-2 h-2 rounded-full bg-white"></span>
-                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
-                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
+
+                    <!-- Tour 3 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?hanoi,oldquarter" alt="Hà Nội">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.7 (158)</span>
+                            </div>
+                            <h3 class="card-title">Khám phá 36 phố phường Hà Nội</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Hà Nội</span>
+                                <span><i class="fas fa-calendar-alt"></i> 2 ngày 1 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">1,650,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
+                        </div>
                     </div>
-                </div>
-                <div class="p-4 flex flex-col">
-                    <h3 class="text-lg font-bold">Phố Cổ Hội An</h3>
-                    <p class="text-sm text-gray-500">Quảng Nam</p>
-                    <p class="text-green-500 font-bold">9.6 Tuyệt vời (1,004 đánh giá)</p>
-                    <p class="text-lg font-semibold text-gray-700">
-                        1.800.000₫ <span class="line-through text-gray-400">2.420.000₫</span>
-                    </p>
-                    <p class="text-sm text-gray-500">Bao gồm thuế & phí</p>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4 w-full hover-button">Đặt Ngay</button>
+
+                    <!-- Tour 4 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?mekong,delta" alt="Miền Tây">
+                            <div class="card-badge">Khởi hành hàng ngày</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.3 (102)</span>
+                            </div>
+                            <h3 class="card-title">Miền Tây sông nước</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Cần Thơ, Tiền Giang</span>
+                                <span><i class="fas fa-calendar-alt"></i> 2 ngày 1 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">1,350,000₫</span>
+                                <span class="old-price">1,700,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Hotel Card 3 -->
-            <div class="card bg-white rounded-xl overflow-hidden shadow-lg tour-card h-full" data-aos="fade-up"
-                 data-aos-duration="300">
-                <div class="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item">
-                            <img src="https://via.placeholder.com/300" alt="Hotel" class="w-full object-cover">
+            <!-- Danh sách tour mạo hiểm -->
+            <div class="category-content" id="adventure">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                    <!-- Tour 1 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?sapa,mountains" alt="Sapa">
                         </div>
-                        <div class="carousel-item">
-                            <img src="https://via.placeholder.com/300?text=Image+2" alt="Hotel"
-                                 class="w-full object-cover">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://via.placeholder.com/300?text=Image+3" alt="Hotel"
-                                 class="w-full object-cover">
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.8 (175)</span>
+                            </div>
+                            <h3 class="card-title">Chinh phục đỉnh Fansipan</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Sapa, Lào Cai</span>
+                                <span><i class="fas fa-calendar-alt"></i> 3 ngày 2 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">2,950,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
                         </div>
                     </div>
-                    <div class="flex justify-between absolute inset-x-0 top-1/2 transform -translate-y-1/2 z-10 px-4">
-                        <button class="carousel-control carousel-prev bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
-                                type="button"
-                                onclick="prevSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
-                            <span class="text-xl">&#9664;</span>
-                        </button>
-                        <button class="carousel-control carousel-next bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
-                                type="button"
-                                onclick="nextSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
-                            <span class="text-xl">&#9654;</span>
-                        </button>
+
+                    <!-- Tour 2 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?cave,mountain" alt="Quảng Bình">
+                            <div class="card-badge">Hot</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.5 (163)</span>
+                            </div>
+                            <h3 class="card-title">Khám phá hang Sơn Đoòng</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Quảng Bình</span>
+                                <span><i class="fas fa-calendar-alt"></i> 4 ngày 3 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">4,950,000₫</span>
+                                <span class="old-price">5,500,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
+                        </div>
                     </div>
-                    <div class="carousel-indicators absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
-                        <span class="dot w-2 h-2 rounded-full bg-white"></span>
-                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
-                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
+
+                    <!-- Tour 3 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?waterfall,jungle" alt="Đà Lạt">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>4.2 (97)</span>
+                            </div>
+                            <h3 class="card-title">Tour Canyoning Đà Lạt</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Đà Lạt, Lâm Đồng</span>
+                                <span><i class="fas fa-calendar-alt"></i> 2 ngày 1 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">1,850,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
+                        </div>
                     </div>
-                </div>
-                <div class="p-4 flex flex-col">
-                    <h3 class="text-lg font-bold">Sapa</h3>
-                    <p class="text-sm text-gray-500">Lào Cai</p>
-                    <p class="text-green-500 font-bold">9.0 Tuyệt vời (202 đánh giá)</p>
-                    <p class="text-lg font-semibold text-gray-700">
-                        2.200.000₫ <span class="line-through text-gray-400">2.670.000₫</span>
-                    </p>
-                    <p class="text-sm text-gray-500">Bao gồm thuế & phí</p>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4 w-full hover-button">Đặt Ngay</button>
+
+                    <!-- Tour 4 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?biking,mountain" alt="Hà Giang">
+                            <div class="card-badge">Phiêu lưu</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.7 (189)</span>
+                            </div>
+                            <h3 class="card-title">Phượt Hà Giang bằng xe máy</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Hà Giang</span>
+                                <span><i class="fas fa-calendar-alt"></i> 4 ngày 3 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">3,250,000₫</span>
+                                <span class="old-price">3,800,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Hotel Card 4 -->
-            <div class="card bg-white rounded-xl overflow-hidden shadow-lg tour-card h-full" data-aos="fade-up"
-                 data-aos-duration="300">
-                <div class="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item">
-                            <img src="https://via.placeholder.com/300" alt="Hotel" class="w-full object-cover">
+            <!-- Danh sách tour cao cấp -->
+            <div class="category-content" id="luxury">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                    <!-- Tour 1 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?cruise,luxury" alt="Hạ Long">
+                            <div class="card-badge">Sang trọng</div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="https://via.placeholder.com/300?text=Image+2" alt="Hotel"
-                                 class="w-full object-cover">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://via.placeholder.com/300?text=Image+3" alt="Hotel"
-                                 class="w-full object-cover">
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0 (216)</span>
+                            </div>
+                            <h3 class="card-title">Du thuyền 5 sao vịnh Hạ Long</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Vịnh Hạ Long</span>
+                                <span><i class="fas fa-calendar-alt"></i> 3 ngày 2 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">6,500,000₫</span>
+                                <span class="old-price">7,500,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
                         </div>
                     </div>
-                    <div class="flex justify-between absolute inset-x-0 top-1/2 transform -translate-y-1/2 z-10 px-4">
-                        <button class="carousel-control carousel-prev bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
-                                type="button"
-                                onclick="prevSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
-                            <span class="text-xl">&#9664;</span>
-                        </button>
-                        <button class="carousel-control carousel-next bg-gray-800 bg-opacity-70 text-white w-10 h-10 rounded-full focus:outline-none flex items-center justify-center"
-                                type="button"
-                                onclick="nextSlide(this.closest('.carousel')); event.stopPropagation(); return false;">
-                            <span class="text-xl">&#9654;</span>
-                        </button>
+
+                    <!-- Tour 2 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?resort,luxury" alt="Nha Trang">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (183)</span>
+                            </div>
+                            <h3 class="card-title">Nghỉ dưỡng tại Six Senses Ninh Vân Bay</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Nha Trang</span>
+                                <span><i class="fas fa-calendar-alt"></i> 4 ngày 3 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">9,800,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
+                        </div>
                     </div>
-                    <div class="carousel-indicators absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
-                        <span class="dot w-2 h-2 rounded-full bg-white"></span>
-                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
-                        <span class="dot w-2 h-2 rounded-full bg-white opacity-50"></span>
+
+                    <!-- Tour 3 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?golf,resort" alt="Đà Nẵng">
+                            <div class="card-badge">VIP</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.8 (152)</span>
+                            </div>
+                            <h3 class="card-title">Golf & Spa tại Đà Nẵng</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Đà Nẵng</span>
+                                <span><i class="fas fa-calendar-alt"></i> 5 ngày 4 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">7,350,000₫</span>
+                                <span class="old-price">8,200,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
+                        </div>
                     </div>
-                </div>
-                <div class="p-4 flex flex-col">
-                    <h3 class="text-lg font-bold">Đảo Phú Quốc</h3>
-                    <p class="text-sm text-gray-500">Kiên Giang</p>
-                    <p class="text-green-500 font-bold">9.4 Tuyệt vời (601 đánh giá)</p>
-                    <p class="text-lg font-semibold text-gray-700">
-                        3.200.000₫ <span class="line-through text-gray-400">4.260.000₫</span>
-                    </p>
-                    <p class="text-sm text-gray-500">Bao gồm thuế & phí</p>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded mt-4 w-full hover-button">Đặt Ngay</button>
+
+                    <!-- Tour 4 -->
+                    <div class="category-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="card-image">
+                            <img src="https://source.unsplash.com/random/800x600/?vineyard,dalat" alt="Đà Lạt">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>4.9 (134)</span>
+                            </div>
+                            <h3 class="card-title">Trải nghiệm vườn nho & rượu vang Đà Lạt</h3>
+                            <div class="card-info">
+                                <span><i class="fas fa-map-marker-alt"></i> Đà Lạt</span>
+                                <span><i class="fas fa-calendar-alt"></i> 3 ngày 2 đêm</span>
+                            </div>
+                            <div class="card-price">
+                                <span class="price">4,950,000₫</span>
+                            </div>
+                            <button class="card-button">Xem chi tiết</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="more-button">
-            <a href="link-cua-ban.html" class="hover-button">Xem thêm</a>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                <h3>Vietnam Travel</h3>
+                <p>Đồng hành cùng bạn khám phá vẻ đẹp Việt Nam với những trải nghiệm du lịch tuyệt vời và đáng nhớ.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                <h3>Liên Kết Nhanh</h3>
+                <ul class="footer-links">
+                    <li><a href="#destinations">Điểm Đến</a></li>
+                    <li><a href="#services">Dịch Vụ</a></li>
+                    <li><a href="#about">Về Chúng Tôi</a></li>
+                    <li><a href="#testimonials">Đánh Giá</a></li>
+                    <li><a href="#contact">Liên Hệ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                <h3>Vị Trí</h3>
+                <ul class="footer-links">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.6377650418153!2d106.78212350913388!3d10.8550347892539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527006db97ff1%3A0x8ed7036831a229d3!2sHUTECH%20E%202!5e1!3m2!1svi!2s!4v1741144811825!5m2!1svi!2s"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </ul>
+            </div>
         </div>
 
+        <div class="footer-bottom">
+            <p>.</p>
+        </div>
+    </footer>
 
-    </div>
+    <!-- JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-
-
-
-    <div class="container">
-        <section id="destinations">
-            <h2 class="section-title" data-aos="fade-up">Điểm Đến Nổi Bật</h2>
-            <div class="destinations">
-                <div class="destination-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="../hinh/vinhhalong.jpg" alt="Hạ Long Bay" class="destination-img">
-                    <div class="destination-content">
-                        <h3 class="destination-title">Vịnh Hạ Long</h3>
-                        <p class="destination-desc">
-                            Khám phá kỳ quan thiên nhiên thế giới với hàng nghìn hòn đảo đá vôi
-                            tuyệt đẹp và hang động kỳ ảo.
-                        </p>
-                        <p class="destination-price">Từ 2,500,000 VNĐ</p>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="../hinh/phocohoian.png" alt="Hoi An" class="destination-img">
-                    <div class="destination-content">
-                        <h3 class="destination-title">Phố Cổ Hội An</h3>
-                        <p class="destination-desc">
-                            Thành phố cổ quyến rũ với đèn lồng đầy màu sắc, kiến trúc cổ và văn
-                            hóa ẩm thực phong phú.
-                        </p>
-                        <p class="destination-price">Từ 1,800,000 VNĐ</p>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-aos="fade-up" data-aos-delay="300">
-                    <img src="/api/placeholder/400/300" alt="Sapa" class="destination-img">
-                    <div class="destination-content">
-                        <h3 class="destination-title">Sapa</h3>
-                        <p class="destination-desc">
-                            Thị trấn miền núi với ruộng bậc thang tuyệt đẹp, văn hóa dân tộc đa
-                            dạng và khung cảnh thiên nhiên hùng vĩ.
-                        </p>
-                        <p class="destination-price">Từ 2,200,000 VNĐ</p>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-aos="fade-up" data-aos-delay="400">
-                    <img src="/api/placeholder/400/300" alt="Mekong Delta" class="destination-img">
-                    <div class="destination-content">
-                        <h3 class="destination-title">Đồng Bằng Sông Cửu Long</h3>
-                        <p class="destination-desc">
-                            Khám phá cuộc sống sông nước, chợ nổi đặc trưng và vườn trái cây
-                            xanh tươi của miền Tây Nam Bộ.
-                        </p>
-                        <p class="destination-price">Từ 1,500,000 VNĐ</p>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-aos="fade-up" data-aos-delay="100">
-                    <img src="/api/placeholder/400/300" alt="Phu Quoc" class="destination-img">
-                    <div class="destination-content">
-                        <h3 class="destination-title">Đảo Phú Quốc</h3>
-                        <p class="destination-desc">
-                            Thiên đường biển đảo với bãi biển cát trắng, nước biển trong xanh và
-                            hải sản tươi ngon.
-                        </p>
-                        <p class="destination-price">Từ 3,200,000 VNĐ</p>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-aos="fade-up" data-aos-delay="200">
-                    <img src="/api/placeholder/400/300" alt="Hue" class="destination-img">
-                    <div class="destination-content">
-                        <h3 class="destination-title">Cố Đô Huế</h3>
-                        <p class="destination-desc">
-                            Thành phố di sản với Đại Nội, lăng tẩm vua chúa và ẩm thực cung đình
-                            đặc sắc.
-                        </p>
-                        <p class="destination-price">Từ 1,900,000 VNĐ</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services">
-            <h2 class="section-title" data-aos="fade-up">Dịch Vụ Du Lịch Của Chúng Tôi</h2>
-            <div class="services">
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="service-icon"><i class="fas fa-hotel"></i></div>
-                    <h3 class="service-title">Khách Sạn & Resort</h3>
-                    <p class="service-desc">Đặt phòng tại các khách sạn và resort cao cấp với giá ưu đãi tốt nhất.</p>
-                </div>
-
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="service-icon"><i class="fas fa-bus"></i></div>
-                    <h3 class="service-title">Tour Du Lịch</h3>
-                    <p class="service-desc">Các tour du lịch đa dạng, phù hợp với mọi nhu cầu và ngân sách.</p>
-                </div>
-
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="service-icon"><i class="fas fa-plane"></i></div>
-                    <h3 class="service-title">Vé Máy Bay</h3>
-                    <p class="service-desc">Đặt vé máy bay nội địa và quốc tế với mức giá cạnh tranh.</p>
-                </div>
-
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="service-icon"><i class="fas fa-utensils"></i></div>
-                    <h3 class="service-title">Ẩm Thực</h3>
-                    <p class="service-desc">Khám phá ẩm thực đặc sắc của từng vùng miền Việt Nam.</p>
-                </div>
-
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="service-icon"><i class="fas fa-taxi"></i></div>
-                    <h3 class="service-title">Đón Tiễn Sân Bay</h3>
-                    <p class="service-desc">Dịch vụ đón tiễn sân bay chuyên nghiệp, đúng giờ.</p>
-                </div>
-
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="service-icon"><i class="fas fa-users"></i></div>
-                    <h3 class="service-title">Tour Gia Đình</h3>
-                    <p class="service-desc">Các tour được thiết kế đặc biệt dành cho gia đình có trẻ nhỏ.</p>
-                </div>
-
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="service-icon"><i class="fas fa-swimmer"></i></div>
-                    <h3 class="service-title">Hoạt Động Giải Trí</h3>
-                    <p class="service-desc">Đa dạng các hoạt động giải trí, thể thao và văn hóa.</p>
-                </div>
-
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
-                    <h3 class="service-title">Hướng Dẫn Viên</h3>
-                    <p class="service-desc">Đội ngũ hướng dẫn viên chuyên nghiệp, nhiều kinh nghiệm.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="about">
-            <h2 class="section-title" data-aos="fade-up">Về Chúng Tôi</h2>
-            <div class="about">
-                <div class="about-img" data-aos="fade-right">
-                    <img src="/api/placeholder/600/400" alt="About Vietnam Travel">
-                </div>
-                <div class="about-content" data-aos="fade-left">
-                    <h3 class="about-title">Vietnam Travel - Đồng hành cùng trải nghiệm của bạn</h3>
-                    <p class="about-desc">
-                        Vietnam Travel tự hào là công ty du lịch hàng đầu Việt Nam với hơn 15 năm kinh
-                        nghiệm trong lĩnh vực du lịch. Chúng tôi cam kết mang đến cho khách hàng những trải nghiệm du
-                        lịch độc đáo, chất lượng và đáng nhớ.
-                    </p>
-                    <p class="about-desc">
-                        Với đội ngũ nhân viên chuyên nghiệp, tận tâm cùng mạng lưới đối tác rộng khắp,
-                        chúng tôi tự tin đáp ứng mọi nhu cầu du lịch của quý khách, từ tour tiêu chuẩn đến tour thiết kế
-                        riêng.
-                    </p>
-                    <p class="about-desc">
-                        Sứ mệnh của chúng tôi là không chỉ đưa du khách đến những điểm đến, mà còn tạo
-                        ra những kỷ niệm đáng nhớ, kết nối du khách với con người, văn hóa và thiên nhiên Việt Nam.
-                    </p>
-                    <a href="#contact" class="cta-button hover-button">Liên Hệ Với Chúng Tôi</a>
-                </div>
-            </div>
-        </section>
-
-        
-    </div>
-
-    <!-- Script cho hiệu ứng -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Khởi tạo AOS với thời gian nhanh hơn
+        // Initialize AOS
         AOS.init({
-            duration: 500,
-            once: true,
-            offset: 50
+            duration: 800,
+            once: true
         });
 
-        // Hiệu ứng parallax cho header
-        window.addEventListener('scroll', function () {
-            const parallax = document.getElementById('parallax-header');
-            if (parallax) {
-                let scrollPosition = window.pageYOffset;
-                parallax.style.backgroundPositionY = (scrollPosition * 0.3) + 'px';
+        // Initialize Swiper
+        const swiper = new Swiper('.tourSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+                1280: {
+                    slidesPerView: 4,
+                }
             }
         });
 
-        // Hiệu ứng sticky nav
-        window.addEventListener('scroll', function () {
-            const navbar = document.getElementById('navbar');
-            if (navbar) {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('sticky');
-                } else {
-                    navbar.classList.remove('sticky');
-                }
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.querySelector('.preloader');
+            preloader.classList.add('preloader-hide');
+
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 1000);
+        });
+
+        // Mobile Menu
+        const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
             }
         });
 
-        // Khởi tạo carousel
-        document.addEventListener('DOMContentLoaded', function () {
-            const carousels = document.querySelectorAll('.carousel');
+        // Xử lý chuyển tab tour
+        const categoryTabs = document.querySelectorAll('.category-tab');
+        const categoryContents = document.querySelectorAll('.category-content');
 
-            // Tạo một ID duy nhất cho mỗi carousel để dễ quản lý
-            carousels.forEach((carousel, index) => {
-                carousel.setAttribute('data-carousel-id', `carousel-${index}`);
-                const slides = carousel.querySelectorAll('.carousel-item');
-                const inner = carousel.querySelector('.carousel-inner');
-                const dots = carousel.querySelectorAll('.carousel-indicators .dot');
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Xóa trạng thái active cho tất cả tab
+                categoryTabs.forEach(t => t.classList.remove('active'));
 
-                // Khởi tạo thuộc tính dữ liệu cho mỗi carousel
-                carousel.dataset.currentSlide = 0;
-                carousel.dataset.totalSlides = slides.length;
+                // Thêm trạng thái active cho tab được click
+                tab.classList.add('active');
 
-                // Xử lý event touch cho mobile
-                let touchStartX = 0;
-                let touchEndX = 0;
+                // Lấy category từ data attribute
+                const category = tab.getAttribute('data-category');
 
-                carousel.addEventListener('touchstart', function (e) {
-                    touchStartX = e.changedTouches[0].screenX;
+                // Ẩn tất cả nội dung
+                categoryContents.forEach(content => {
+                    content.classList.remove('active');
                 });
 
-                carousel.addEventListener('touchend', function (e) {
-                    touchEndX = e.changedTouches[0].screenX;
-                    handleSwipe(carousel);
-                });
-
-                function handleSwipe(carousel) {
-                    if (touchEndX < touchStartX) {
-                        // Vuốt sang trái -> Chuyển sang slide tiếp theo
-                        nextSlide(carousel);
-                    } else if (touchEndX > touchStartX) {
-                        // Vuốt sang phải -> Chuyển sang slide trước
-                        prevSlide(carousel);
-                    }
-                }
-
-                // Đánh dấu slide đầu tiên là active
-                if (slides.length > 0) {
-                    updateDots(carousel, 0);
-                }
-
-                // Tự động chuyển slide sau mỗi 5 giây
-                setInterval(function () {
-                    nextSlide(carousel);
-                }, 5000);
-
-                // Thêm sự kiện click cho dots của carousel này
-                const dotsForThisCarousel = carousel.querySelectorAll('.carousel-indicators .dot');
-                dotsForThisCarousel.forEach((dot, dotIndex) => {
-                    dot.addEventListener('click', function () {
-                        goToSlide(carousel, dotIndex);
-                    });
-                });
-            });
-        });
-
-        // Hàm cập nhật trạng thái dots
-        function updateDots(carousel, activeIndex) {
-            // Chỉ cập nhật dots trong carousel được chỉ định
-            const dots = carousel.querySelectorAll('.carousel-indicators .dot');
-
-            dots.forEach((dot, index) => {
-                if (index === activeIndex) {
-                    dot.classList.remove('opacity-50');
-                } else {
-                    dot.classList.add('opacity-50');
-                }
-            });
-
-            // Lưu lại vị trí slide hiện tại
-            carousel.dataset.currentSlide = activeIndex;
-        }
-
-        // Hàm chuyển đến slide trước
-        function prevSlide(carousel) {
-            const slides = carousel.querySelectorAll('.carousel-item');
-            const inner = carousel.querySelector('.carousel-inner');
-            const slideWidth = slides[0].clientWidth;
-
-            // Lấy thông tin từ dataset
-            let currentSlide = parseInt(carousel.dataset.currentSlide || 0);
-            const totalSlides = slides.length;
-
-            // Tính toán slide mới
-            let newSlide = currentSlide - 1;
-            if (newSlide < 0) newSlide = totalSlides - 1;
-
-            // Cập nhật vị trí
-            const newPosition = -slideWidth * newSlide;
-            inner.style.transform = `translateX(${newPosition}px)`;
-
-            // Cập nhật dots
-            updateDots(carousel, newSlide);
-        }
-
-        // Hàm chuyển đến slide tiếp theo
-        function nextSlide(carousel) {
-            const slides = carousel.querySelectorAll('.carousel-item');
-            const inner = carousel.querySelector('.carousel-inner');
-            const slideWidth = slides[0].clientWidth;
-
-            // Lấy thông tin từ dataset
-            let currentSlide = parseInt(carousel.dataset.currentSlide || 0);
-            const totalSlides = slides.length;
-
-            // Tính toán slide mới
-            let newSlide = currentSlide + 1;
-            if (newSlide >= totalSlides) newSlide = 0;
-
-            // Cập nhật vị trí
-            const newPosition = -slideWidth * newSlide;
-            inner.style.transform = `translateX(${newPosition}px)`;
-
-            // Cập nhật dots
-            updateDots(carousel, newSlide);
-        }
-
-        // Hàm chuyển đến slide cụ thể
-        function goToSlide(carousel, index) {
-            const slides = carousel.querySelectorAll('.carousel-item');
-            const inner = carousel.querySelector('.carousel-inner');
-            const slideWidth = slides[0].clientWidth;
-
-            // Kiểm tra giới hạn index
-            if (index < 0) index = 0;
-            if (index >= slides.length) index = slides.length - 1;
-
-            // Cập nhật vị trí
-            const position = -slideWidth * index;
-            inner.style.transform = `translateX(${position}px)`;
-
-            // Cập nhật dots
-            updateDots(carousel, index);
-        }
-
-        // Hiệu ứng ripple cho các button
-        document.addEventListener('click', function (e) {
-            if (e.target.classList.contains('hover-button') || e.target.parentElement.classList.contains('hover-button')) {
-                const button = e.target.classList.contains('hover-button') ? e.target : e.target.parentElement;
-                const circle = document.createElement('span');
-                const diameter = Math.max(button.clientWidth, button.clientHeight);
-
-                circle.style.width = circle.style.height = `${diameter}px`;
-                circle.style.left = `${e.clientX - button.offsetLeft - diameter / 2}px`;
-                circle.style.top = `${e.clientY - button.offsetTop - diameter / 2}px`;
-                circle.classList.add('ripple');
-
-                const ripple = button.querySelector('.ripple');
-                if (ripple) {
-                    ripple.remove();
-                }
-
-                button.appendChild(circle);
-            }
-        });
-
-        // Smooth scroll cho các liên kết
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                // Hiển thị nội dung tương ứng
+                document.getElementById(category).classList.add('active');
             });
         });
     </script>
-    <script src="../src/controllers/homecontroller.js"></script>
-
 </body>
+
+</html>

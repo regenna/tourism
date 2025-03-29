@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using web_do_an.Areas.Admin.Models;
 using web_do_an.Commons;
 using web_do_an.Models;
+using web_do_an.Models.Model_TT;
 using web_do_an.user;
 
 namespace web_do_an.Areas.Admin.Controllers
@@ -19,12 +20,8 @@ namespace web_do_an.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            var viewModel = new LoginSignUpViewModel
-            {
-                LoginModel = new LoginModel(),
-                SignUpModel = new SignUpModel()
-            };
-            return View(viewModel);
+            
+            return View();
         }
 
         [HttpPost]

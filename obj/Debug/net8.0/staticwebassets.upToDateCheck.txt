@@ -1,11 +1,15 @@
 wwwroot\css\admin\mycss.css
 wwwroot\css\admin\styles.css
+wwwroot\css\chitiet\mycss.css
 wwwroot\css\site.css
+wwwroot\css\user\styles.css
 wwwroot\css\view.css
 wwwroot\favicon.ico
 wwwroot\js\admin\JS.js
 wwwroot\js\admin\script.js
+wwwroot\js\chitiet\JS.js
 wwwroot\js\site.js
+wwwroot\js\user\script.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
