@@ -3,9 +3,13 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 using System.Reflection;
 using web_do_an.user;
 using web_do_an.Models.Model_TT;
+using web_do_an.Repositories.EFRepository;
+using web_do_an.Repositories.IRepository;
+using FluentAssertions.Common;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -19,6 +23,8 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+
+builder.Services.AddScoped<ITourRepository, EFTourRepository>();
 
 var assemblies = AppDomain.CurrentDomain.GetAssemblies(); // Lấy tất cả các assembly hiện tại
 

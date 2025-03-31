@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<web_do_an.Models.Model_TT.Tour>
 @{
     Layout = null;
 }
@@ -36,15 +36,7 @@
                 <div class="logo-icon"><i class="fas fa-sailboat"></i></div>
                 Travel<span>.</span>
             </a>
-            <ul class="nav-menu">
-                <li><a href="#" class="active">HOME</a></li>
-                <li><a href="#">PACKAGES</a></li>
-                <li><a href="#">SHOP</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">PAGES</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">CONTACT</a></li>
-            </ul>
+            
             <div class="nav-right">
                 <a href="#" class="book-now">BOOK NOW</a>
                 <button class="mobile-menu-toggle">
@@ -117,109 +109,36 @@
 
             <div class="swiper tourSwiper" data-aos="fade-up" data-aos-delay="200">
                 <div class="swiper-wrapper">
-                    <!-- Tour Card 1 -->
-                    <div class="swiper-slide">
-                        <div class="card bg-white rounded-xl overflow-hidden shadow-lg">
-                            <div class="card-tag">-30%</div>
-                            <div class="card-img">
-                                <img src="../hinh/vinhhalong/vinhhalong.jpg" alt="Vịnh Hạ Long" class="w-full h-60 object-cover">
-                            </div>
-                            <div class="p-4">
-                                <span class="location"><i class="fas fa-map-marker-alt"></i> Hạ Long, Quảng Ninh</span>
-                                <h3 class="text-lg font-bold">Tour Vịnh Hạ Long 3 ngày 2 đêm</h3>
-                                <div class="flex items-center text-yellow-500 my-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                    <span class="text-gray-500 ml-2">(236 đánh giá)</span>
-                                </div>
-                                <div class="flex justify-between items-center mt-4">
-                                    <p class="text-lg font-semibold text-gray-700"><span class="text-green-600">2,500,000₫</span> <span class="line-through text-gray-400">3,200,000₫</span></p>
-                                    <button class="book-btn">Đặt ngay</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @if (Model == null || !Model.Any())
+                    {
+                        <p>Không có tour nào để hiển thị.</p>
+                    }
+                    else
+                    {
+                    @foreach (var tour in Model)
+                    {
 
-                    <!-- Tour Card 2 -->
-                    <div class="swiper-slide">
-                        <div class="card bg-white rounded-xl overflow-hidden shadow-lg">
-                            <div class="card-tag hot">Hot</div>
-                            <div class="card-img">
-                                <img src="../hinh/phocohoian.png" alt="Hội An" class="w-full h-60 object-cover">
-                            </div>
-                            <div class="p-4">
-                                <span class="location"><i class="fas fa-map-marker-alt"></i> Hội An, Quảng Nam</span>
-                                <h3 class="text-lg font-bold">Khám phá Phố cổ Hội An</h3>
-                                <div class="flex items-center text-yellow-500 my-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <span class="text-gray-500 ml-2">(187 đánh giá)</span>
-                                </div>
-                                <div class="flex justify-between items-center mt-4">
-                                    <p class="text-lg font-semibold text-gray-700"><span class="text-green-600">1,800,000₫</span> <span class="line-through text-gray-400">2,500,000₫</span></p>
-                                    <button class="book-btn">Đặt ngay</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        
 
-                    <!-- Thêm các tour cards khác tương tự -->
-                    <!-- Tour Card 3 -->
-                    <div class="swiper-slide">
-                        <div class="card bg-white rounded-xl overflow-hidden shadow-lg">
-                            <div class="card-img">
-                                <img src="https://via.placeholder.com/400x300" alt="Sapa" class="w-full h-60 object-cover">
-                            </div>
-                            <div class="p-4">
-                                <span class="location"><i class="fas fa-map-marker-alt"></i> Sapa, Lào Cai</span>
-                                <h3 class="text-lg font-bold">Sapa - Ruộng bậc thang mùa vàng</h3>
-                                <div class="flex items-center text-yellow-500 my-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="far fa-star"></i>
-                                    <span class="text-gray-500 ml-2">(153 đánh giá)</span>
+                        <div class="swiper-slide">
+                            <div class="card bg-white rounded-xl overflow-hidden shadow-lg">
+                                <div class="card-img">
+                                    <img src="@tour.AnhDaiDien" alt="@tour.TenTour" class="w-full h-60 object-cover">
                                 </div>
-                                <div class="flex justify-between items-center mt-4">
-                                    <p class="text-lg font-semibold text-gray-700"><span class="text-green-600">2,200,000₫</span></p>
-                                    <button class="book-btn">Đặt ngay</button>
+                                <div class="p-4">
+                                    <span class="location"><i class="fas fa-map-marker-alt"></i> @tour.MoTaTour</span>
+                                    <h3 class="text-lg font-bold">@tour.TenTour</h3>
+                                    <div class="flex justify-between items-center mt-4">
+                                        <p class="text-lg font-semibold text-gray-700">
+                                            <span class="text-green-600">@String.Format("{0:N0}₫", tour.Gia)</span>
+                                        </p>
+                                        <a href="/TrangChu/Details/@tour.MaTour" class="book-btn">Xem chi tiết</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Tour Card 4 -->
-                    <div class="swiper-slide">
-                        <div class="card bg-white rounded-xl overflow-hidden shadow-lg">
-                            <div class="card-tag">-15%</div>
-                            <div class="card-img">
-                                <img src="https://via.placeholder.com/400x300" alt="Phú Quốc" class="w-full h-60 object-cover">
-                            </div>
-                            <div class="p-4">
-                                <span class="location"><i class="fas fa-map-marker-alt"></i> Phú Quốc, Kiên Giang</span>
-                                <h3 class="text-lg font-bold">Thiên đường biển đảo Phú Quốc</h3>
-                                <div class="flex items-center text-yellow-500 my-2">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                    <span class="text-gray-500 ml-2">(296 đánh giá)</span>
-                                </div>
-                                <div class="flex justify-between items-center mt-4">
-                                    <p class="text-lg font-semibold text-gray-700"><span class="text-green-600">3,200,000₫</span> <span class="line-through text-gray-400">3,800,000₫</span></p>
-                                    <button class="book-btn">Đặt ngay</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    }
+                    }
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-next"></div>
@@ -236,466 +155,30 @@
         <div class="container mx-auto p-6">
             <h2 class="section-title" data-aos="fade-up">Tour du lịch theo chủ đề</h2>
             <p class="section-subtitle" data-aos="fade-up">Lựa chọn tour phù hợp với sở thích và phong cách của bạn</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                @foreach (var tour in Model)
+                {
+                 
 
-            <div class="categories-tabs" data-aos="fade-up">
-                <button class="category-tab active" data-category="beach">Du lịch biển</button>
-                <button class="category-tab" data-category="culture">Du lịch văn hóa</button>
-                <button class="category-tab" data-category="adventure">Du lịch mạo hiểm</button>
-                <button class="category-tab" data-category="luxury">Du lịch cao cấp</button>
-            </div>
-
-            <!-- Danh sách các tour biển -->
-            <div class="category-content active" id="beach">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-                    <!-- Tour 1 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-card" data-aos="fade-up">
                         <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?beach,vietnam" alt="Phú Quốc">
-                            <div class="card-badge">Bán chạy</div>
+                            <img src="@tour.AnhDaiDien" alt="@tour.TenTour">
                         </div>
                         <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>4.7 (124)</span>
-                            </div>
-                            <h3 class="card-title">Khám phá thiên đường Phú Quốc</h3>
+                            <h3 class="card-title">@tour.TenTour</h3>
                             <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Phú Quốc</span>
-                                <span><i class="fas fa-calendar-alt"></i> 4 ngày 3 đêm</span>
+                                <span><i class="fas fa-map-marker-alt"></i> @tour.MoTaTour</span>
+                                <span><i class="fas fa-calendar-alt"></i> @tour.SoNgay ngày</span>
                             </div>
                             <div class="card-price">
-                                <span class="price">3,450,000₫</span>
-                                <span class="old-price">4,500,000₫</span>
+                                <span class="price">@String.Format("{0:N0}₫", tour.Gia)</span>
                             </div>
-                            <button class="card-button">Xem chi tiết</button>
+                            <a href="/TrangChu/Details/@tour.MaTour" class="card-button">Xem chi tiết</a>
                         </div>
                     </div>
+                }
+            </div> <!-- Đây là kết thúc đúng -->
 
-                    <!-- Tour 2 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?nhatrang" alt="Nha Trang">
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span>4.0 (86)</span>
-                            </div>
-                            <h3 class="card-title">Khám phá vịnh Nha Trang</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Nha Trang</span>
-                                <span><i class="fas fa-calendar-alt"></i> 3 ngày 2 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">2,750,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-
-                    <!-- Tour 3 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?danang,beach" alt="Đà Nẵng">
-                            <div class="card-badge">Giảm 20%</div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span>4.9 (215)</span>
-                            </div>
-                            <h3 class="card-title">Bãi biển Mỹ Khê - Đà Nẵng</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Đà Nẵng</span>
-                                <span><i class="fas fa-calendar-alt"></i> 4 ngày 3 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">3,200,000₫</span>
-                                <span class="old-price">4,000,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-
-                    <!-- Tour 4 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?muine" alt="Mũi Né">
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span>4.2 (94)</span>
-                            </div>
-                            <h3 class="card-title">Đồi cát Mũi Né - Phan Thiết</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Phan Thiết</span>
-                                <span><i class="fas fa-calendar-alt"></i> 3 ngày 2 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">2,350,000₫</span>
-                                <span class="old-price">2,900,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Danh sách tour văn hóa -->
-            <div class="category-content" id="culture">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-                    <!-- Tour 1 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?hue,palace" alt="Huế">
-                            <div class="card-badge">Tour mới</div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>4.6 (142)</span>
-                            </div>
-                            <h3 class="card-title">Khám phá Cố đô Huế</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Huế</span>
-                                <span><i class="fas fa-calendar-alt"></i> 2 ngày 1 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">1,850,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-
-                    <!-- Tour 2 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?hoian" alt="Hội An">
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span>5.0 (231)</span>
-                            </div>
-                            <h3 class="card-title">Khám phá phố cổ Hội An</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Quảng Nam</span>
-                                <span><i class="fas fa-calendar-alt"></i> 3 ngày 2 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">2,450,000₫</span>
-                                <span class="old-price">2,900,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-
-                    <!-- Tour 3 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?hanoi,oldquarter" alt="Hà Nội">
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>4.7 (158)</span>
-                            </div>
-                            <h3 class="card-title">Khám phá 36 phố phường Hà Nội</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Hà Nội</span>
-                                <span><i class="fas fa-calendar-alt"></i> 2 ngày 1 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">1,650,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-
-                    <!-- Tour 4 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?mekong,delta" alt="Miền Tây">
-                            <div class="card-badge">Khởi hành hàng ngày</div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span>4.3 (102)</span>
-                            </div>
-                            <h3 class="card-title">Miền Tây sông nước</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Cần Thơ, Tiền Giang</span>
-                                <span><i class="fas fa-calendar-alt"></i> 2 ngày 1 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">1,350,000₫</span>
-                                <span class="old-price">1,700,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Danh sách tour mạo hiểm -->
-            <div class="category-content" id="adventure">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-                    <!-- Tour 1 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?sapa,mountains" alt="Sapa">
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span>4.8 (175)</span>
-                            </div>
-                            <h3 class="card-title">Chinh phục đỉnh Fansipan</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Sapa, Lào Cai</span>
-                                <span><i class="fas fa-calendar-alt"></i> 3 ngày 2 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">2,950,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-
-                    <!-- Tour 2 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?cave,mountain" alt="Quảng Bình">
-                            <div class="card-badge">Hot</div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>4.5 (163)</span>
-                            </div>
-                            <h3 class="card-title">Khám phá hang Sơn Đoòng</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Quảng Bình</span>
-                                <span><i class="fas fa-calendar-alt"></i> 4 ngày 3 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">4,950,000₫</span>
-                                <span class="old-price">5,500,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-
-                    <!-- Tour 3 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?waterfall,jungle" alt="Đà Lạt">
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span>4.2 (97)</span>
-                            </div>
-                            <h3 class="card-title">Tour Canyoning Đà Lạt</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Đà Lạt, Lâm Đồng</span>
-                                <span><i class="fas fa-calendar-alt"></i> 2 ngày 1 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">1,850,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-
-                    <!-- Tour 4 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?biking,mountain" alt="Hà Giang">
-                            <div class="card-badge">Phiêu lưu</div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>4.7 (189)</span>
-                            </div>
-                            <h3 class="card-title">Phượt Hà Giang bằng xe máy</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Hà Giang</span>
-                                <span><i class="fas fa-calendar-alt"></i> 4 ngày 3 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">3,250,000₫</span>
-                                <span class="old-price">3,800,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Danh sách tour cao cấp -->
-            <div class="category-content" id="luxury">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-                    <!-- Tour 1 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?cruise,luxury" alt="Hạ Long">
-                            <div class="card-badge">Sang trọng</div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span>5.0 (216)</span>
-                            </div>
-                            <h3 class="card-title">Du thuyền 5 sao vịnh Hạ Long</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Vịnh Hạ Long</span>
-                                <span><i class="fas fa-calendar-alt"></i> 3 ngày 2 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">6,500,000₫</span>
-                                <span class="old-price">7,500,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-
-                    <!-- Tour 2 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?resort,luxury" alt="Nha Trang">
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span>4.9 (183)</span>
-                            </div>
-                            <h3 class="card-title">Nghỉ dưỡng tại Six Senses Ninh Vân Bay</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Nha Trang</span>
-                                <span><i class="fas fa-calendar-alt"></i> 4 ngày 3 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">9,800,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-
-                    <!-- Tour 3 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?golf,resort" alt="Đà Nẵng">
-                            <div class="card-badge">VIP</div>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <span>4.8 (152)</span>
-                            </div>
-                            <h3 class="card-title">Golf & Spa tại Đà Nẵng</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Đà Nẵng</span>
-                                <span><i class="fas fa-calendar-alt"></i> 5 ngày 4 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">7,350,000₫</span>
-                                <span class="old-price">8,200,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-
-                    <!-- Tour 4 -->
-                    <div class="category-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card-image">
-                            <img src="https://source.unsplash.com/random/800x600/?vineyard,dalat" alt="Đà Lạt">
-                        </div>
-                        <div class="card-body">
-                            <div class="card-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <span>4.9 (134)</span>
-                            </div>
-                            <h3 class="card-title">Trải nghiệm vườn nho & rượu vang Đà Lạt</h3>
-                            <div class="card-info">
-                                <span><i class="fas fa-map-marker-alt"></i> Đà Lạt</span>
-                                <span><i class="fas fa-calendar-alt"></i> 3 ngày 2 đêm</span>
-                            </div>
-                            <div class="card-price">
-                                <span class="price">4,950,000₫</span>
-                            </div>
-                            <button class="card-button">Xem chi tiết</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 

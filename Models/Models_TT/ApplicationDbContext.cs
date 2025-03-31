@@ -18,7 +18,7 @@ namespace web_do_an.Models.Model_TT
         public DbSet<TaiKhoan> TaiKhoans { get; set; }
         public DbSet<Tour> Tours { get; set; }
         public DbSet<ChiTietTour> ChiTietTours { get; set; }
-        public DbSet<DanhGia> DanhGias { get; set; }
+       
         public DbSet<DiemKhoiHanh> DiemKhoiHanhs { get; set; }
         public DbSet<LoaiTour> LoaiTours { get; set; }
         public DbSet<PhieuDatTour> PhieuDatTours { get; set; }
@@ -26,23 +26,10 @@ namespace web_do_an.Models.Model_TT
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Cấu hình bảng trung gian
-
-
-            // Cấu hình bảng trung gian
-            modelBuilder.Entity<DanhGia>()
-                .HasKey(sk => new { sk.MaTour, sk.MaTK }); // Khóa chính kết hợp
-
-            modelBuilder.Entity<DanhGia>()
-                .HasOne(sk => sk.Tour)
-                .WithMany(s => s.DanhGias)
-                .HasForeignKey(sk => sk.MaTour);
-
-            modelBuilder.Entity<DanhGia>()
-                .HasOne(sk => sk.TaiKhoan)
-                .WithMany(k => k.DanhGias)
-                .HasForeignKey(sk => sk.MaTK);
-
+            modelBuilder.Entity<Tour>()
+                .HasOne(t => t.LoaiTour)         // `Tour` có một `LoaiTour`
+                .WithMany(lt => lt.Tours)        // `LoaiTour` có nhiều `Tour`
+                .HasForeignKey(t => t.MaLoai);   // Khóa ngoại là `MaLoai`
 
             // Cấu hình bảng trung gian
             modelBuilder.Entity<ChiTietPhuongTien>()

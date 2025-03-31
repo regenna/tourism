@@ -24,7 +24,7 @@ namespace web_do_an.Repositories.EFRepository
             return await _context.Tours
                 .Include(c => c.LoaiTour)
 
-                .FirstOrDefaultAsync(c => c.MaLoai == id); // Tìm theo id
+                .FirstOrDefaultAsync(c => c.MaTour == id); // Tìm theo id
         }
         public async Task AddAsync(Tour tour)
         {

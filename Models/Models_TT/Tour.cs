@@ -18,12 +18,12 @@ namespace web_do_an.Models.Model_TT
 
         public string MoTaTour { get; set; }
 
-        public string TrangThaiTour { get; set; }
+        public int TrangThaiTour { get; set; }
 
         public int MaLoai { get; set; }
         public LoaiTour? LoaiTour { get; set; }
 
-        public ICollection<DanhGia> DanhGias { get; set; }
+        
 
     }
 }

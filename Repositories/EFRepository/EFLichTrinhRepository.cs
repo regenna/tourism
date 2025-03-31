@@ -15,15 +15,15 @@ namespace web_do_an.Repositories.EFRepository
         public async Task<IEnumerable<LichTrinh>> GetAllAsync()
         {
             return await _context.LichTrinhs
-                .Include(c => c.ChiTietTour)
+                .Include(c => c.tour)
                 .ToListAsync();
         }
         public async Task<LichTrinh> GetByIdAsync(int id)
         {
             return await _context.LichTrinhs
-                .Include(c => c.ChiTietTour)
+                .Include(c => c.tour)
                 
-                .FirstOrDefaultAsync(c => c.MaCTTour == id); // Tìm theo id
+                .FirstOrDefaultAsync(c => c.MaTour == id); // Tìm theo id
         }
         public async Task AddAsync(LichTrinh lichtrinh)
         {

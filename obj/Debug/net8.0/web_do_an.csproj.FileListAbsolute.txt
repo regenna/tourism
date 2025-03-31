@@ -633,3 +633,4 @@ D:\chuongtrinhhoc\tourism\1\tourism\obj\Debug\net8.0\refint\web_do_an.dll
 D:\chuongtrinhhoc\tourism\1\tourism\obj\Debug\net8.0\web_do_an.pdb
 D:\chuongtrinhhoc\tourism\1\tourism\obj\Debug\net8.0\web_do_an.genruntimeconfig.cache
 D:\chuongtrinhhoc\tourism\1\tourism\obj\Debug\net8.0\ref\web_do_an.dll
+D:\chuongtrinhhoc\tourism\1\tourism\bin\Debug\net8.0\FluentAssertions.dll

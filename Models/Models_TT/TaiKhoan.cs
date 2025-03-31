@@ -31,6 +31,6 @@ namespace web_do_an.Models.Model_TT
 
         public bool? TrangThaiTK { get; set; }
 
-        public ICollection<DanhGia> DanhGias { get; set; }
+       
     }
 }

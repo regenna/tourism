@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using web_do_an.Models.Model_TT;
 using web_do_an.Repositories.IRepository;
 
 namespace web_do_an.Controllers
@@ -6,12 +7,12 @@ namespace web_do_an.Controllers
     public class TrangChuController : Controller
     {
         private readonly ITourRepository _tourRepository;
-        private readonly ILoaiTourRepository _loaiTourRepository;
+       
 
-        public TrangChuController(ITourRepository tourRepository, ILoaiTourRepository loaiTourRepository)
+        public TrangChuController(ITourRepository tourRepository)
         {
             _tourRepository = tourRepository;
-            _loaiTourRepository = loaiTourRepository;
+           
 
         }
 

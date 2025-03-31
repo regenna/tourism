@@ -12,6 +12,6 @@ namespace web_do_an.Models.Model_TT
 
 
         public string TenLoai { get; set; }
-
+        public ICollection<Tour> Tours { get; set; }
     }
 }

@@ -18,8 +18,8 @@ namespace web_do_an.Models.Model_TT
         public string TeHoatDongToi { get; set; }
 
 
-        public int MaCTTour { get; set; }
-        public ChiTietTour? ChiTietTour { get; set; }
+        public int MaTour { get; set; }
+        public Tour? tour { get; set; }
 
 
         public ICollection<ChiTietLichTrinh> ChiTietLichTrinhs { get; set; }
