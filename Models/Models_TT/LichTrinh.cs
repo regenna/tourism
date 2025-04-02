@@ -22,7 +22,7 @@ namespace web_do_an.Models.Model_TT
         public Tour? tour { get; set; }
 
 
-        public ICollection<ChiTietLichTrinh> ChiTietLichTrinhs { get; set; }
+       
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using web_do_an.Models.Models_TT;
 
 namespace web_do_an.Models.Model_TT
 {
@@ -8,10 +9,11 @@ namespace web_do_an.Models.Model_TT
         {
 
         }
-        public DbSet<ChiTietLichTrinh> ChiTietLichTrinhs { get; set; }
+      
         public DbSet<ChiTietPhuongTien> ChiTietPhuongTiens { get; set; }
         public DbSet<DiemDen> DiemDens { get; set; }
 
+        public DbSet<HinhAnh> HinhAnhs { get; set; }
         public DbSet<LichTrinh> LichTrinhs { get; set; }
         public DbSet<PhuongTienDC> PhuongTienDCs { get; set; }
 
@@ -46,19 +48,7 @@ namespace web_do_an.Models.Model_TT
                 .HasForeignKey(sk => sk.MaPT);
 
 
-            // Cấu hình bảng trung gian
-            modelBuilder.Entity<ChiTietLichTrinh>()
-                .HasKey(sk => new { sk.MaDD, sk.MaLT }); // Khóa chính kết hợp
-
-            modelBuilder.Entity<ChiTietLichTrinh>()
-                .HasOne(sk => sk.DiemDen)
-                .WithMany(s => s.ChiTietLichTrinhs)
-                .HasForeignKey(sk => sk.MaDD);
-
-            modelBuilder.Entity<ChiTietLichTrinh>()
-                .HasOne(sk => sk.LichTrinh)
-                .WithMany(k => k.ChiTietLichTrinhs)
-                .HasForeignKey(sk => sk.MaLT);
+          
 
         }
 

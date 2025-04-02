@@ -11,6 +11,6 @@
     "\\wwwroot\\css",
     "\\wwwroot\\css\\admin"
   ],
-  "SelectedNode": "\\Views\\ChiTiet\\Index.cshtml",
+  "SelectedNode": "\\Controllers\\TrangChuController.cs",
   "PreviewInSolutionExplorer": false
 }

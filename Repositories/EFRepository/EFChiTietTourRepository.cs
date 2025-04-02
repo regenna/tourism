@@ -16,23 +16,17 @@ namespace web_do_an.Repositories.EFRepository
         {
             return await _context.ChiTietTours
                 .Include(c => c.Tour)
-                .Include(c => c.DiemKhoiHanh)
+              
                 .ToListAsync();
         }
         public async Task<ChiTietTour> GetByIdAsync(int id)
         {
             return await _context.ChiTietTours
                 .Include(c => c.Tour)
-                .Include(c => c.DiemKhoiHanh)
+               
                 .FirstOrDefaultAsync(c => c.MaTour == id); // Tìm theo id
         }
-        public async Task<ChiTietTour> GetByIdAsync(int id,int maDKh)
-        {
-            return await _context.ChiTietTours
-                .Include(c => c.Tour)
-                .Include(c => c.DiemKhoiHanh)
-                .FirstOrDefaultAsync(c => c.MaTour == id && c.DiemKhoiHanh.MaDKH == maDKh);
-        }
+      
         public async Task AddAsync(ChiTietTour chithiettour)
         {
             _context.ChiTietTours.Add(chithiettour);

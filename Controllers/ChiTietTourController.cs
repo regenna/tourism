@@ -10,19 +10,19 @@ namespace web_do_an.Controllers
         private readonly IChiTietTourRepository _chiTietTourRepository;
         private readonly ILichTrinhRepository _lichTrinhRepository;
         private readonly IDiemKhoiHanhRepository _diemKhoiHanhRepository;
-        private readonly IChiTietLichTrinhRepository _chiTietLichTrinhRepository;
+       
         private readonly IDiemDenRepository _diemDenRepository;
         private readonly IChiTietPhuongTienRepository _chiTietPhuongTienRepository;
         private readonly IPhuongTienDCRepository _phuongTienDCRepository;
 
-        public ChiTietTourController(ITourRepository tourRepository, ILoaiTourRepository loaiTourRepository, IChiTietTourRepository chiTietTourRepository, ILichTrinhRepository lichTrinhRepository, IDiemKhoiHanhRepository diemKhoiHanhRepository, IChiTietLichTrinhRepository chiTietLichTrinhRepository, IDiemDenRepository diemDenRepository, IChiTietPhuongTienRepository chiTietPhuongTienRepository, IPhuongTienDCRepository phuongTienDCRepository)
+        public ChiTietTourController(ITourRepository tourRepository, ILoaiTourRepository loaiTourRepository, IChiTietTourRepository chiTietTourRepository, ILichTrinhRepository lichTrinhRepository, IDiemKhoiHanhRepository diemKhoiHanhRepository, IDiemDenRepository diemDenRepository, IChiTietPhuongTienRepository chiTietPhuongTienRepository, IPhuongTienDCRepository phuongTienDCRepository)
         {
             _tourRepository = tourRepository;
             _loaiTourRepository = loaiTourRepository;
             _chiTietTourRepository = chiTietTourRepository;
             _lichTrinhRepository = lichTrinhRepository;
             _diemKhoiHanhRepository = diemKhoiHanhRepository;
-            _chiTietLichTrinhRepository = chiTietLichTrinhRepository;
+           
             _diemDenRepository = diemDenRepository;
             _chiTietPhuongTienRepository = chiTietPhuongTienRepository;
             _phuongTienDCRepository = phuongTienDCRepository;
@@ -44,7 +44,7 @@ namespace web_do_an.Controllers
             var loaitour = await _loaiTourRepository.GetByIdAsync(tour.MaLoai);
             var chitiettour = await _chiTietTourRepository.GetByIdAsync(tour.MaTour);
             var lichtrinh = await _lichTrinhRepository.GetByIdAsync(tour.MaTour);
-            var chitietlichtrinh = await _chiTietLichTrinhRepository.GetByIdAsync(tour.MaTour);
+           
             var diemkhoihanh = await _diemKhoiHanhRepository.GetByIdAsync(tour.MaTour);
             var chiTietphuongtien = await _chiTietPhuongTienRepository.GetByIdAsync(tour.MaTour);
             var phuongtiendc = await _phuongTienDCRepository.GetByIdAsync(tour.MaTour);
@@ -54,7 +54,7 @@ namespace web_do_an.Controllers
             ViewBag.LoaiTour = loaitour;
             ViewBag.ChiTietTour = chitiettour;
             ViewBag.LichTrinh = lichtrinh;
-            ViewBag.ChiTietLichTrinh = chitietlichtrinh;
+            
             ViewBag.DiemKhoiHanh = diemkhoihanh;
             ViewBag.ChiTietPhuongTien = chiTietphuongtien;
             ViewBag.PhuongTienDC = phuongtiendc;

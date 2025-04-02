@@ -14,6 +14,6 @@ namespace web_do_an.Models.Model_TT
 
         public string HinhAnh { get; set; }
 
-        public ICollection<ChiTietLichTrinh> ChiTietLichTrinhs { get; set; }
+        
     }
 }

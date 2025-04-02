@@ -39,7 +39,7 @@ namespace web_do_an.Areas.Admin.Controllers
                             TenKH = user.TenKH
                         };
                         HttpContext.Session.SetString(User_session.USER_SESSION, JsonConvert.SerializeObject(session)); // Lưu vào session
-
+                        
                         return RedirectToAction("Index", "HomeAdmin");
                     }
                 }

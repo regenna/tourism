@@ -10,7 +10,7 @@ namespace web_do_an.Models.View_Model
         public IEnumerable<LoaiTour> loaiTours { get; set; }
         public IEnumerable<ChiTietPhuongTien> chiTietPhuongTiens { get; set; }
         public IEnumerable<PhuongTienDC> phuongTienDCs { get; set; }
-        public IEnumerable<ChiTietLichTrinh> chiTietLichTrinhs { get; set; }
+     
         public IEnumerable<DiemDen> diemDens { get; set; }
 
 

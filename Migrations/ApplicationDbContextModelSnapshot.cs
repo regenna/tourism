@@ -22,24 +22,6 @@ namespace web_do_an.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("web_do_an.Models.Model_TT.ChiTietLichTrinh", b =>
-                {
-                    b.Property<int>("MaDD")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MaLT")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("Ngay")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("MaDD", "MaLT");
-
-                    b.HasIndex("MaLT");
-
-                    b.ToTable("ChiTietLichTrinhs");
-                });
-
             modelBuilder.Entity("web_do_an.Models.Model_TT.ChiTietPhuongTien", b =>
                 {
                     b.Property<int>("MaCTTour")
@@ -66,12 +48,6 @@ namespace web_do_an.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaCTTour"));
 
-                    b.Property<int?>("DiemKhoiHanhMaDKH")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MaDKH")
-                        .HasColumnType("int");
-
                     b.Property<int>("MaTour")
                         .HasColumnType("int");
 
@@ -88,8 +64,6 @@ namespace web_do_an.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("MaCTTour");
-
-                    b.HasIndex("DiemKhoiHanhMaDKH");
 
                     b.HasIndex("TourMaTour");
 
@@ -308,12 +282,15 @@ namespace web_do_an.Migrations
 
                     b.Property<string>("TenTK")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<bool?>("TrangThaiTK")
                         .HasColumnType("bit");
 
                     b.HasKey("MaTK");
+
+                    b.HasIndex("TenTK")
+                        .IsUnique();
 
                     b.ToTable("TaiKhoans");
                 });
@@ -334,8 +311,20 @@ namespace web_do_an.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("DiemDenMaDD")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("DiemKhoiHanhMaDKH")
+                        .HasColumnType("int");
+
                     b.Property<float>("Gia")
                         .HasColumnType("real");
+
+                    b.Property<int>("MaDD")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MaDKH")
+                        .HasColumnType("int");
 
                     b.Property<int>("MaLoai")
                         .HasColumnType("int");
@@ -359,28 +348,38 @@ namespace web_do_an.Migrations
 
                     b.HasKey("MaTour");
 
+                    b.HasIndex("DiemDenMaDD");
+
+                    b.HasIndex("DiemKhoiHanhMaDKH");
+
                     b.HasIndex("MaLoai");
 
                     b.ToTable("Tours");
                 });
 
-            modelBuilder.Entity("web_do_an.Models.Model_TT.ChiTietLichTrinh", b =>
+            modelBuilder.Entity("web_do_an.Models.Models_TT.HinhAnh", b =>
                 {
-                    b.HasOne("web_do_an.Models.Model_TT.DiemDen", "DiemDen")
-                        .WithMany("ChiTietLichTrinhs")
-                        .HasForeignKey("MaDD")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("MaHinhAnh")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.HasOne("web_do_an.Models.Model_TT.LichTrinh", "LichTrinh")
-                        .WithMany("ChiTietLichTrinhs")
-                        .HasForeignKey("MaLT")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MaHinhAnh"));
 
-                    b.Navigation("DiemDen");
+                    b.Property<int>("MaTour")
+                        .HasColumnType("int");
 
-                    b.Navigation("LichTrinh");
+                    b.Property<string>("TenHinhAnh")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("tourMaTour")
+                        .HasColumnType("int");
+
+                    b.HasKey("MaHinhAnh");
+
+                    b.HasIndex("tourMaTour");
+
+                    b.ToTable("HinhAnhs");
                 });
 
             modelBuilder.Entity("web_do_an.Models.Model_TT.ChiTietPhuongTien", b =>
@@ -404,15 +403,9 @@ namespace web_do_an.Migrations
 
             modelBuilder.Entity("web_do_an.Models.Model_TT.ChiTietTour", b =>
                 {
-                    b.HasOne("web_do_an.Models.Model_TT.DiemKhoiHanh", "DiemKhoiHanh")
-                        .WithMany()
-                        .HasForeignKey("DiemKhoiHanhMaDKH");
-
                     b.HasOne("web_do_an.Models.Model_TT.Tour", "Tour")
                         .WithMany()
                         .HasForeignKey("TourMaTour");
-
-                    b.Navigation("DiemKhoiHanh");
 
                     b.Navigation("Tour");
                 });
@@ -443,28 +436,39 @@ namespace web_do_an.Migrations
 
             modelBuilder.Entity("web_do_an.Models.Model_TT.Tour", b =>
                 {
+                    b.HasOne("web_do_an.Models.Model_TT.DiemDen", "DiemDen")
+                        .WithMany()
+                        .HasForeignKey("DiemDenMaDD");
+
+                    b.HasOne("web_do_an.Models.Model_TT.DiemKhoiHanh", "DiemKhoiHanh")
+                        .WithMany()
+                        .HasForeignKey("DiemKhoiHanhMaDKH");
+
                     b.HasOne("web_do_an.Models.Model_TT.LoaiTour", "LoaiTour")
                         .WithMany("Tours")
                         .HasForeignKey("MaLoai")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("DiemDen");
+
+                    b.Navigation("DiemKhoiHanh");
+
                     b.Navigation("LoaiTour");
+                });
+
+            modelBuilder.Entity("web_do_an.Models.Models_TT.HinhAnh", b =>
+                {
+                    b.HasOne("web_do_an.Models.Model_TT.Tour", "tour")
+                        .WithMany()
+                        .HasForeignKey("tourMaTour");
+
+                    b.Navigation("tour");
                 });
 
             modelBuilder.Entity("web_do_an.Models.Model_TT.ChiTietTour", b =>
                 {
                     b.Navigation("ChiTietPhuongTiens");
-                });
-
-            modelBuilder.Entity("web_do_an.Models.Model_TT.DiemDen", b =>
-                {
-                    b.Navigation("ChiTietLichTrinhs");
-                });
-
-            modelBuilder.Entity("web_do_an.Models.Model_TT.LichTrinh", b =>
-                {
-                    b.Navigation("ChiTietLichTrinhs");
                 });
 
             modelBuilder.Entity("web_do_an.Models.Model_TT.LoaiTour", b =>

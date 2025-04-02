@@ -23,7 +23,13 @@ namespace web_do_an.Models.Model_TT
         public int MaLoai { get; set; }
         public LoaiTour? LoaiTour { get; set; }
 
-        
+        public int MaDKH { get; set; }
+        public DiemKhoiHanh? DiemKhoiHanh { get; set; }
+
+        public int MaDD { get; set; }
+        public DiemDen? DiemDen { get; set; }
+
+
 
     }
 }

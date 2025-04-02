@@ -18,8 +18,7 @@ namespace web_do_an.Models.Model_TT
         public Tour? Tour { get; set; }
 
 
-        public int MaDKH { get; set; }
-        public DiemKhoiHanh? DiemKhoiHanh { get; set; }
+       
 
         public ICollection<ChiTietPhuongTien> ChiTietPhuongTiens { get; set; }
 

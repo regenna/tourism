@@ -1,9 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Net.Sockets;
+using Microsoft.EntityFrameworkCore;
 
 namespace web_do_an.Models.Model_TT
 {
+    [Index(nameof(TenTK), IsUnique = true)]
     public class TaiKhoan
     {
         [Key]

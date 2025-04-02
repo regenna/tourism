@@ -23,7 +23,7 @@ namespace web_do_an.Controllers
                 loaiTours = _context.LoaiTours,
                 chiTietPhuongTiens = _context.ChiTietPhuongTiens,
                 phuongTienDCs = _context.PhuongTienDCs,
-                chiTietLichTrinhs = _context.ChiTietLichTrinhs,
+                
                 diemDens = _context.DiemDens
             };
 
